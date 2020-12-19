@@ -7,6 +7,8 @@ module.exports = {
       resolve: "gatsby-source-datocms",
       options: {
         apiToken: "9fad847465dac027ad4706570eb78d",
+        preview: false,
+        disableLiveReload: false,
       },
     },
     "gatsby-plugin-styled-components",

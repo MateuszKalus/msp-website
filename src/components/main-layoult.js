@@ -1,12 +1,28 @@
 import React from "react"
+import "./main-layoult.css"
+import Navbar from "./Navbar/Navbar";
 
-const MainLayoult = ({children}, ...props) => {
+const MainLayoult = ({children, ...props}) => {
+
 
     return(
-        <div>
-            PARATORE!!!
-            {children}
-        </div>
+        <main>
+            <header>
+                <div className={'headerContent'}>
+
+                </div>
+
+            </header>
+            <Navbar />
+            <section>
+                {children}
+
+            </section>
+
+            <footer>
+
+            </footer>
+        </main>
     )
 }
 

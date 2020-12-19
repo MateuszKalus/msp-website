@@ -5,7 +5,7 @@ import MainLayoult from "../components/main-layoult";
 // markup
 const IndexPage = () => {
   return (
-      <MainLayoult>
+      <MainLayoult mainPage={true}>
         KALAREfPA
       </MainLayoult>
 
