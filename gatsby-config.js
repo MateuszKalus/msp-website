@@ -3,6 +3,7 @@ module.exports = {
     title: "MSP-website",
   },
   plugins: [
+    `gatsby-plugin-sass`,
     {
       resolve: "gatsby-source-datocms",
       options: {

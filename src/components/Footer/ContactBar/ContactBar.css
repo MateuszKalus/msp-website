@@ -1,0 +1,24 @@
+.contactbar-wrapper {
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-around;
+    align-items: flex-start;
+
+    margin: 10px;
+    margin-left: 160px;
+    color: white;
+    font-size: 12px;
+}
+
+.contactbar-icon {
+    width: 30px;
+    margin-right: 8px;
+}
+.contactbar-section {
+    display: flex;
+
+}
+.contactbar-label {
+    margin-top: 6px;
+}
