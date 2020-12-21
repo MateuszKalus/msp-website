@@ -3,16 +3,20 @@ import "./JoinUs.css"
 import JoinUsImg from '../../images/zdj_g@2x.png'
 import {Link} from 'gatsby'
 
-import ReactTextTransition, {presets} from "react-text-transition";
+import TextLoop from "react-text-loop";
+
+// import ReactTextTransition, {presets} from "react-text-transition";
+
+
 
 
 const JoinUs = (props) => {
     const jobs = [
-        {title: 'Technik elektroradiolog', adr: '#'},
-        {title: 'Technik masażysta', adr: '#'},
-        {title: 'Higienistka stomatologiczna', adr: '#'},
-        {title: 'Opiekun w domu pomocy społecznej', adr: '#'},
-        {title: 'Terapeuta zajęciowy', adr: '#'},
+        {title: 'Technik elektroradiolog', adr: '#1'},
+        {title: 'Technik masażysta', adr: '#2'},
+        {title: 'Higienistka stomatologiczna', adr: '#3'},
+        {title: 'Opiekun w domu pomocy społecznej', adr: '#4'},
+        {title: 'Terapeuta zajęciowy', adr: '#5'},
         {title: 'Technik usług kosmetycznych', adr: '#'},
         {title: 'Technik masażysta', adr: '#'},
         {title: 'Higienistka stomatologiczna', adr: '#'},
@@ -47,18 +51,22 @@ const JoinUs = (props) => {
                 trwa rekrutacja blablablaa<br/>
                 jesteśmy super
             </div>
-            <Link to={jobs[counter].adr}>
+            {/*<Link to={jobs[counter].adr}>*/}
 
                 <div className={'joinus-slicer'}>
-                    <ReactTextTransition
-                        text={jobs[counter].title}
-                        order={jobs[counter].title}
-                        spring={{stiffness: 50, damping: 20}}
-                    />
 
+                    <TextLoop springConfig={{ stiffness: 180, damping: 8 }} interval={3000} children={jobs.map(x=>x.title)}>
+
+                        {jobs.map(item => (
+                            <Link to={item.adr} style={{textDecoration: 'none', color: 'white'}}>{item.title}</Link>
+
+                            )
+                        )}
+
+                    </TextLoop>
 
                 </div>
-            </Link>
+
         </div>
     )
 }
