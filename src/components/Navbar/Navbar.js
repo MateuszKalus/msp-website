@@ -22,16 +22,16 @@ const Navbar = (props) => {
                     <img id={'logo-in-navbar'} src={Logo} alt={'logo'}/>
                 </div>
 
-                <div className={'navbar-content'}>
-                    <div className="dropdown">
+                <ul className={'navbar-content'}>
+                    <li className="dropdown">
                         <a href={'#'}>
                             <div className="dropbtn">AKTUALNOŚCI</div>
                         </a>
                         <div className="dropdown-content">
                         </div>
-                    </div>
+                    </li>
 
-                    <div className="dropdown">
+                    <li className="dropdown">
                         <div className="dropbtn">
                             <span>REKRUTACJA</span>
                             <div className={'arrow'}></div>
@@ -41,9 +41,9 @@ const Navbar = (props) => {
                             <a href="#">Kierunki kształcenia</a>
                             <a href="#">Dokumenty do pobrania</a>
                         </div>
-                    </div>
+                    </li>
 
-                    <div className="dropdown">
+                    <li className="dropdown">
                         <div className="dropbtn">
                             <span>DLA SŁUCHACZY</span>
                             <div className={'arrow'}></div>
@@ -54,18 +54,18 @@ const Navbar = (props) => {
                             <a href="#">Doradca finansowy</a>
                             <a href="#">Rada słuchaczy</a>
                         </div>
-                    </div>
+                    </li>
 
-                    <div className="dropdown">
+                    <li className="dropdown">
                         <a href={'#'}>
                             <div className="dropbtn">KURSY I SZKOLENIA</div>
                         </a>
 
                         <div className="dropdown-content">
                         </div>
-                    </div>
+                    </li>
 
-                    <div className="dropdown">
+                    <li className="dropdown">
                         <div className="dropbtn">
                             <span>O NAS</span>
                             <div className={'arrow'}></div>
@@ -75,17 +75,17 @@ const Navbar = (props) => {
                             <a href="#">Galeria</a>
                             <a href="#">RODO</a>
                         </div>
-                    </div>
+                    </li>
 
-                    <div className="dropdown">
+                    <li className="dropdown">
                         <a href={'#'}>
                             <div className="dropbtn">KONTAKT</div>
                         </a>
                         <div className="dropdown-content">
                         </div>
-                    </div>
+                    </li>
 
-                </div>
+                </ul>
 
 
 

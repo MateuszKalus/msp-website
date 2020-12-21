@@ -8,17 +8,17 @@ import ReactTextTransition, {presets} from "react-text-transition";
 
 const JoinUs = (props) => {
     const jobs = [
-        {title: 'Technik elektroradiolog', adr: 'kierunki/onet.pl'},
-        {title: 'Technik masażysta', adr: 'kierunki/wp.pl'},
-        // 'Higienistka stomatologiczna',
-        // 'Opiekun w domu pomocy społecznej',
-        // 'Terapeuta zajęciowy',
-        // 'Technik usług kosmetycznych',
-        // 'Technik masażysta',
-        // 'Higienistka stomatologiczna',
-        // 'Technik sterylizacji medycznej',
-        // 'Opiekun medyczny',
-        // 'Asystent osoby niepełnosprawnej'
+        {title: 'Technik elektroradiolog', adr: '#'},
+        {title: 'Technik masażysta', adr: '#'},
+        {title: 'Higienistka stomatologiczna', adr: '#'},
+        {title: 'Opiekun w domu pomocy społecznej', adr: '#'},
+        {title: 'Terapeuta zajęciowy', adr: '#'},
+        {title: 'Technik usług kosmetycznych', adr: '#'},
+        {title: 'Technik masażysta', adr: '#'},
+        {title: 'Higienistka stomatologiczna', adr: '#'},
+        {title: 'Technik sterylizacji medycznej', adr: '#'},
+        {title: 'Opiekun medyczny', adr: '#'},
+        {title: 'Asystent osoby niepełnosprawnej', adr: '#'},
     ]
 
     const [counter, setCounter] = useState(0);
@@ -40,7 +40,7 @@ const JoinUs = (props) => {
 
     return (
         <div className={'joinus-wrapper'}>
-            <img src={JoinUsImg} alt={'mainImg'}/>
+            <img id={'joinus-img'} src={JoinUsImg} alt={'mainImg'}/>
 
             <div className={'joinus-label'}>
                 Dołącz do nas<br/><br/>

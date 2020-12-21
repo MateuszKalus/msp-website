@@ -1,0 +1,37 @@
+.article-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: auto;
+
+    font-size: 12px;
+
+    margin: 0px 10px;
+
+}
+
+.article-wrapper:first-of-type {
+    margin-left: 0px;
+}
+
+.article-wrapper:last-of-type {
+    margin-right: 0px;
+}
+
+.article-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.article-img > img{
+    width: 100%;
+    height: auto;
+    height: intrinsic;
+}
+
+
+
+.article-date {
+    margin-top: 20px;
+}

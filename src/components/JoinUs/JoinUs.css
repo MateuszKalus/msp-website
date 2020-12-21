@@ -1,6 +1,8 @@
 .joinus-wrapper > img {
     width: 100%;
+    height: intrinsic;
     transition: .3s ease-in-out;
+    background-size: cover;
 }
 
 .joinus-wrapper:hover > img {
@@ -19,18 +21,18 @@
 
 .joinus-label {
     position: absolute;
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
     left: 40px;
     color: white;
     font-size: 30px;
     font-weight: bold;
 
-    -webkit-transform: rotateX(-11deg) rotateY(30deg) rotateZ(1deg) translateY(-50%);
-    -moz-transform: rotateX(-11deg) rotateY(30deg) rotateZ(1deg) translateY(-50%);
-    -ms-transform: rotateX(-11deg) rotateY(30deg) rotateZ(1deg) translateY(-50%);
-    -o-transform: rotateX(-11deg) rotateY(30deg) rotateZ(1deg) translateY(-50%);
-    transform:  rotateX(-11deg) rotateY(30deg) rotateZ(1deg) translateY(-50%);
+    -webkit-transform: rotateX(21deg) rotateY(-10deg) rotateZ(1deg) scale(0.95) translateY(-50%);
+    -moz-transform: rotateX(21deg) rotateY(-10deg) rotateZ(1deg) scale(0.95) translateY(-50%);
+    -ms-transform: rotateX(21deg) rotateY(-10deg) rotateZ(1deg) scale(0.95) translateY(-50%);
+    -o-transform: rotateX(21deg) rotateY(-10deg) rotateZ(1deg) scale(0.95) translateY(-50%);
+    transform:  rotateX(21deg) rotateY(-10deg) rotateZ(1deg) scale(0.95) translateY(-50%);
 
     transition: .3s ease-in-out;
 
@@ -46,11 +48,11 @@
 .joinus-slicer {
     transition: .3s ease-in-out;
 
-    -webkit-transform: rotateX(-11deg) rotateY(30deg) rotateZ(1deg);
-    -moz-transform: rotateX(-11deg) rotateY(30deg) rotateZ(1deg);
-    -ms-transform: rotateX(-11deg) rotateY(30deg) rotateZ(1deg);
-    -o-transform: rotateX(-11deg) rotateY(30deg) rotateZ(1deg);
-    transform:  rotateX(-11deg) rotateY(30deg) rotateZ(1deg);
+    -webkit-transform: rotateX(21deg) rotateY(-10deg) rotateZ(1deg) scale(0.95);
+    -moz-transform: rotateX(21deg) rotateY(-10deg) rotateZ(1deg) scale(0.95);
+    -ms-transform: rotateX(21deg) rotateY(-10deg) rotateZ(1deg) scale(0.95);
+    -o-transform: rotateX(21deg) rotateY(-10deg) rotateZ(1deg) scale(0.95);
+    transform:  rotateX(21deg) rotateY(-10deg) rotateZ(1deg) scale(0.95);
 
     height: 50px;
     width: 550px;

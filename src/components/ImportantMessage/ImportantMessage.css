@@ -1,0 +1,21 @@
+.important-wrapper {
+    border: 3px solid orange;
+    border-radius: 10px;
+
+    background-color: #f1f1f1;
+
+    padding: 40px;
+    margin: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.important-info {
+    margin-top: 10px;
+    line-height: 30px;
+    text-align: center;
+}

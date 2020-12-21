@@ -39,7 +39,7 @@ header {
 }
 
 main > section {
-    height: 1000px;
+    height: auto;
     width: 100vw;
     background-color: #ffffff;
     display: flex;
@@ -47,6 +47,7 @@ main > section {
 }
 
 .section-content {
+    padding-bottom: 20px;
     width: 75vw;
     height: 100%;
     background-color: white;
