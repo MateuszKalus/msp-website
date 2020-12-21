@@ -11,7 +11,6 @@ import ReactPlayer from 'react-player'
 
 import poster from '../images/zdj_g@2x.png'
 
-// markup
 const IndexPage = () => {
     return (
         <MainLayoult mainPage={true}>

@@ -98,7 +98,7 @@ const MainLayoult = ({children, ...props}) => {
                 <div className={'bottom-footer-section'}>
                     <div className={'bottom-footer-section-label'}>
                         <span>Polityka prywatności i cookies</span>
-                        <span>Copyright KalKom</span>
+                        <span>© KomDżaKal</span>
                     </div>
 
                 </div>
