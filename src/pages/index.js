@@ -3,20 +3,19 @@ import MainLayoult from "../components/main-layoult";
 import './index.css'
 
 import News from "../components/News/News";
+import JoinUs from "../components/JoinUs/JoinUs";
 
-import mainImg from "../images/zdj_g@2x.png"
 
 // markup
 const IndexPage = () => {
-  return (
-      <MainLayoult mainPage={true}>
+    return (
+        <MainLayoult mainPage={true}>
+            <JoinUs/>
 
-          <img style={{width:100+'%'}} src={mainImg} alt={'mainimg'}/>
+            <News/>
+        </MainLayoult>
 
-          <News/>
-      </MainLayoult>
-
-  )
+    )
 }
 
 export default IndexPage

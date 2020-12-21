@@ -1,0 +1,80 @@
+.joinus-wrapper > img {
+    width: 100%;
+    transition: .3s ease-in-out;
+}
+
+.joinus-wrapper:hover > img {
+
+    transform: scale(1.05);
+}
+
+.joinus-wrapper {
+    display: flex;
+    position: relative;
+    margin-top: 15px;
+    height: fit-content;
+
+    overflow: hidden; /* hide the excess */
+}
+
+.joinus-label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 40px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+
+    -webkit-transform: rotateX(-11deg) rotateY(30deg) rotateZ(1deg) translateY(-50%);
+    -moz-transform: rotateX(-11deg) rotateY(30deg) rotateZ(1deg) translateY(-50%);
+    -ms-transform: rotateX(-11deg) rotateY(30deg) rotateZ(1deg) translateY(-50%);
+    -o-transform: rotateX(-11deg) rotateY(30deg) rotateZ(1deg) translateY(-50%);
+    transform:  rotateX(-11deg) rotateY(30deg) rotateZ(1deg) translateY(-50%);
+
+    transition: .3s ease-in-out;
+
+
+}
+
+.joinus-wrapper:hover .joinus-label {
+    transform: translateY(-50%);
+
+}
+
+
+.joinus-slicer {
+    transition: .3s ease-in-out;
+
+    -webkit-transform: rotateX(-11deg) rotateY(30deg) rotateZ(1deg);
+    -moz-transform: rotateX(-11deg) rotateY(30deg) rotateZ(1deg);
+    -ms-transform: rotateX(-11deg) rotateY(30deg) rotateZ(1deg);
+    -o-transform: rotateX(-11deg) rotateY(30deg) rotateZ(1deg);
+    transform:  rotateX(-11deg) rotateY(30deg) rotateZ(1deg);
+
+    height: 50px;
+    width: 550px;
+    background-color: rgba(255,98,0,0.7);
+
+    position: absolute;
+    bottom: 50px;
+    left: 40px;
+
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+
+
+}
+
+.joinus-wrapper:hover .joinus-slicer {
+    transform: none;
+}
+
+.joinus-slicer-content {
+    display: none;
+}

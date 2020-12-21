@@ -22,3 +22,8 @@
 .contactbar-label {
     margin-top: 6px;
 }
+
+.contactbar-wrapper a {
+    text-decoration: none;
+    color: white;
+}

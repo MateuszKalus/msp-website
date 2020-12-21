@@ -12,36 +12,42 @@ const ContactBar = (props) => {
     return (
         <div className={'contactbar-wrapper'}>
 
-            <div className={'contactbar-section'} id={"contactbar-address"}>
-                <div id={"contactbar-address-img"}>
-                    <img src={address_icon} className={'contactbar-icon'}/>
-                </div>
-                <div className={'contactbar-label'} id={"contactbar-address-content"}>
-                    {datas.address}
-                </div>
+            <a href={datas.address.web} target={'_blank'}>
+                <div className={'contactbar-section'} id={"contactbar-address"}>
+                    <div id={"contactbar-address-img"}>
+                        <img src={address_icon} className={'contactbar-icon'}/>
+                    </div>
+                    <div className={'contactbar-label'} id={"contactbar-address-content"}>
+                        {datas.address.label}
+                    </div>
 
-            </div>
-
-            <div className={'contactbar-section'}  id={'contactbar-email'}>
-                <div id={"contactbar-email-img"}>
-                    <img src={email_icon} className={'contactbar-icon'}/>
                 </div>
-                <div className={'contactbar-label'}>{datas.email}</div>
-            </div>
+            </a>
 
-            <div className={'contactbar-section'}  id={'contactbar-phone'}>
+            <a href={`mailto:${datas.email}`}>
+                <div className={'contactbar-section'} id={'contactbar-email'}>
+                    <div id={"contactbar-email-img"}>
+                        <img src={email_icon} className={'contactbar-icon'}/>
+                    </div>
+                    <div className={'contactbar-label'}>{datas.email}</div>
+                </div>
+            </a>
+
+            <div className={'contactbar-section'} id={'contactbar-phone'}>
                 <div id={"contactbar-phone-img"}>
-                    <img src={phone_icon}  className={'contactbar-icon'}/>
+                    <img src={phone_icon} className={'contactbar-icon'}/>
                 </div>
                 <div className={'contactbar-label'}>{datas.phone}</div>
             </div>
 
-            <div className={'contactbar-section'}  id={'contactbar-fb'}>
-                <div id={"contactbar-fb-img"}>
-                    <img src={fb_icon}  className={'contactbar-icon'}/>
+            <a href={datas.fb.web} target={'_blank'}>
+                <div className={'contactbar-section'} id={'contactbar-fb'}>
+                    <div id={"contactbar-fb-img"}>
+                        <img src={fb_icon} className={'contactbar-icon'}/>
+                    </div>
+                    <div className={'contactbar-label'}>{datas.fb.labet}</div>
                 </div>
-                <div className={'contactbar-label'}>{datas.fb}</div>
-            </div>
+            </a>
 
         </div>
     )

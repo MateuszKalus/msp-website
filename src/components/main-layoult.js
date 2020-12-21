@@ -8,16 +8,19 @@ const MainLayoult = ({children, ...props}) => {
     const datas = [
         {
             address:
-                <>
-                    Medyczna Szkoła Policealna<br/>
-                    ul. Stalowa 9A<br/>
-                    41-214 Sosnowiec
-                </>,
+                {
+                    label:
+                        <>
+                            Medyczna Szkoła Policealna<br/>
+                            ul. Stalowa 9A<br/>
+                            41-214 Sosnowiec
+                        </>,
+                    web: 'https://goo.gl/maps/B47PcqjuWV38Hnw68'
+                },
 
             email:
-                <>
-                    rckumed@rcku.nazwa.pl
-                </>,
+                'rckumed@rcku.nazwa.pl'
+            ,
             phone:
                 <>
                     (32) 292-01-91<br/>
@@ -30,32 +33,42 @@ const MainLayoult = ({children, ...props}) => {
                     wew. 23 - Księgowość, Kadry<br/>
                     wew. 24 - Główna Księgowa<br/>
                 </>,
-            fb:
-                <>
-                    Sosnowiec
-                </>
+            fb: {
+                labet:
+                    <>
+                        Sosnowiec
+                    </>,
+                web: 'https://www.facebook.com/RCKUSOSNOWIEC/'
+            }
         },
         {
             address:
-                <>
-                    Medyczna Szkoła Policealna<br/>
-                    oddział w Zawierciu<br/>
-                    ul. Żabia 19B<br/>
-                    42-400 Zawiercie
-                </>,
+                {
+                    label:
+                        <>
+                            Medyczna Szkoła Policealna<br/>
+                            oddział w Zawierciu<br/>
+                            ul. Żabia 19B<br/>
+                            42-400 Zawiercie
+                        </>,
+                    web: 'https://goo.gl/maps/TuqG7yUuJb2has5m7'
+                },
+
 
             email:
-                <>
-                    medyk_zawiercie@poczta.onet.pl
-                </>,
+                'medyk_zawiercie@poczta.onet.pl'
+            ,
             phone:
                 <>
                     (32) 671-21-01<br/>
                 </>,
-            fb:
-                <>
-                    Zawiercie
-                </>
+            fb: {
+                labet:
+                    <>
+                        Zawiercie
+                    </>,
+                web: 'https://www.facebook.com/Regionalne-Centrum-Kszta%C5%82cenia-Ustawicznego-w-Zawierciu-865775153521460/?fref=ts'
+            }
         }
     ]
 
@@ -94,4 +107,4 @@ const MainLayoult = ({children, ...props}) => {
     )
 }
 
-    export default MainLayoult;
+export default MainLayoult;
