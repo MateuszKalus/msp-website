@@ -1,5 +1,5 @@
 import React from "react"
-import {useStaticQuery, graphql} from "gatsby"
+import {useStaticQuery, graphql, Link} from "gatsby"
 
 import "./News.css"
 
@@ -17,6 +17,7 @@ const News = (props) => {
           opisKrotki
           trescNewsa
           tytul
+          slug
           zdjecie {
             url
           }
@@ -25,11 +26,23 @@ const News = (props) => {
     }
   `)
 
-    let generateArticles = (data) => {
 
+    let generateArticles = (data) => {
+        let counter = 0;
         return (
             data.allDatoCmsNews.nodes.map(node => {
-                    return <Article imgURL={node.zdjecie.url} opisKrotki={node.opisKrotki} date={node.meta.publishedAt}/>
+                    const article_name = 'mainpage_news';
+                    counter += 1;
+
+                    let pathToImg;
+                    if (!node.zdjecie) {
+                        pathToImg = 'https://www.datocms-assets.com/39399/1608351709-8073291-snake-texture.jpg';
+                    } else pathToImg = node.zdjecie.url;
+
+                    return (
+                        <Article classes={'article-wrapper'} key={article_name + counter} imgURL={pathToImg}
+                                 opisKrotki={node.opisKrotki} date={node.meta.publishedAt}/>
+                    )
                 }
             )
         )
@@ -39,7 +52,9 @@ const News = (props) => {
         <div className={'news-wrapper'}>
             <div className={'news-headline'}>
                 <span className={'news-title'}>AKTUALNOŚCI</span>
-                <span className={'news-hyperlink'}>Przeczytaj wszystkie</span>
+                <span className={'news-hyperlink'}>
+                    <Link to={'/aktualnosci'}>Przeczytaj wszystkie</Link>
+                </span>
             </div>
             <div className={'news-content'}>
                 {generateArticles(data)}

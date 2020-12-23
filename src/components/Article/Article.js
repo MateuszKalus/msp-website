@@ -1,13 +1,13 @@
 import React from "react"
 import "./Article.css"
 
-const Article = ({opisKrotki, date, imgURL}) => {
+const Article = ({opisKrotki, date, imgURL, classes}) => {
 
     return (
-        <div className={'article-wrapper'}>
+        <div className={classes}>
             <div className={'article-content'}>
                 <div className={'article-img'}>
-                    <img src={imgURL}/>
+                    <img src={imgURL+'?ar=4:3&fit=crop&h=200'}/>
                 </div>
                 <div className={'article-short-descr'}>
                     {opisKrotki}

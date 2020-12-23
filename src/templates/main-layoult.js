@@ -1,9 +1,11 @@
-import React from "react"
+import React, {useEffect} from "react"
 import "./main-layoult.css"
-import Navbar from "./Navbar/Navbar";
-import ContactBar from "./Footer/ContactBar/ContactBar";
+import Navbar from '../components/Navbar/Navbar'
+import ContactBar from '../components/Footer/ContactBar/ContactBar'
+import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 
-const MainLayoult = ({children, ...props}) => {
+const MainLayoult = ({children, location, crumbLabel, ...props}) => {
+
 
     const datas = [
         {
@@ -70,7 +72,17 @@ const MainLayoult = ({children, ...props}) => {
                 web: 'https://www.facebook.com/Regionalne-Centrum-Kszta%C5%82cenia-Ustawicznego-w-Zawierciu-865775153521460/?fref=ts'
             }
         }
-    ]
+    ];
+
+    useEffect(()=>{
+        const breadcrumb = document.querySelector('.breadcrumb');
+
+        if (location.pathname==='/') {
+            breadcrumb.classList.remove('show');
+        } else {
+            breadcrumb.classList.add('show')
+        }
+    })
 
     return (
         <main>
@@ -84,8 +96,9 @@ const MainLayoult = ({children, ...props}) => {
             <Navbar/>
             <section>
                 <div className={'section-content'}>
-
+                    <Breadcrumb location={location} crumbLabel={crumbLabel} />
                     {children}
+
                 </div>
 
             </section>

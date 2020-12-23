@@ -32,7 +32,10 @@ main > nav {
 
     box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
 
+}
 
+.active_button {
+    background-color: #C04E00;
 }
 
 .logo-navbar {

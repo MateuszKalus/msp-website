@@ -1,5 +1,5 @@
 import React from "react"
-import MainLayoult from "../components/main-layoult";
+import MainLayoult from "../templates/main-layoult";
 import './index.css'
 
 import News from "../components/News/News";
@@ -10,11 +10,16 @@ import ImportantMessage from "../components/ImportantMessage/ImportantMessage";
 import ReactPlayer from 'react-player'
 
 import poster from '../images/zdj_g@2x.png'
+import {graphql} from "gatsby";
 
-const IndexPage = () => {
+const IndexPage = ({location, data}) => {
+    const jobs = data.allDatoCmsKierunki.edges.map(({node}) => {
+        return {title: node.nazwaKierunku, adr: '/kierunki-ksztalcenia/'+node.jobSlug}
+    })
+
     return (
-        <MainLayoult mainPage={true}>
-            <JoinUs />
+        <MainLayoult mainPage={true} location={location} crumbLabel="Strona Główna">
+            <JoinUs jobs={jobs}/>
             <News />
             <MovieSector />
             <ImportantMessage />
@@ -22,6 +27,22 @@ const IndexPage = () => {
 
     )
 }
+
+export const query = graphql`
+query FetchJobs {
+    allDatoCmsKierunki(sort: {order: ASC, fields: nazwaKierunku}) {
+        edges {
+            node {
+                nazwaKierunku
+                jobSlug
+            }
+        }
+    }
+}
+`
+
+
+
 
 
 export default IndexPage

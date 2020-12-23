@@ -1,0 +1,24 @@
+
+
+.single-job {
+    position: relative;
+    margin: 10px;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.single-job-link {
+    text-decoration: none;
+    color: #5e5f63;
+}
+
+.single-job:not(:last-child)::after {
+    content: '';
+    position: absolute;
+
+    bottom: 0;
+    border-top: 5px solid white;
+
+    width: 100%;
+}

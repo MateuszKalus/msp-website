@@ -1,11 +1,11 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import MainLayoult from "../components/main-layoult";
+import MainLayoult from "../templates/main-layoult";
 
 // markup
-const IndexPage = () => {
+const IndexPage = ({location}) => {
   return (
-    <MainLayoult>
+    <MainLayoult location={location} crumbLabel="Strona nie istnieje">
       404
     </MainLayoult>
   )
