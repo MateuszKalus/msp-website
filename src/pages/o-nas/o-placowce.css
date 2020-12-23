@@ -1,0 +1,6 @@
+.silly-content-wrapper video {
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.2);
+
+    outline: none;
+    /*border: 10px solid gray;*/
+}

@@ -9,22 +9,8 @@ import TextLoop from "react-text-loop";
 
 
 const JoinUs = ({jobs}) => {
-    // const jobs = [
-    //     {title: 'Technik elektroradiolog', adr: '#1'},
-    //     {title: 'Technik masażysta', adr: '#2'},
-    //     {title: 'Higienistka stomatologiczna', adr: '#3'},
-    //     {title: 'Opiekun w domu pomocy społecznej', adr: '#4'},
-    //     {title: 'Terapeuta zajęciowy', adr: '#5'},
-    //     {title: 'Technik usług kosmetycznych', adr: '#'},
-    //     {title: 'Technik masażysta', adr: '#'},
-    //     {title: 'Higienistka stomatologiczna', adr: '#'},
-    //     {title: 'Technik sterylizacji medycznej', adr: '#'},
-    //     {title: 'Opiekun medyczny', adr: '#'},
-    //     {title: 'Asystent osoby niepełnosprawnej', adr: '#'},
-    // ];
 
-    const
-        [counter, setCounter] = useState(0);
+    const [counter, setCounter] = useState(0);
 
 
     useEffect(() => {
@@ -46,7 +32,7 @@ const JoinUs = ({jobs}) => {
             <img id={'joinus-img'} src={JoinUsImg} alt={'mainImg'}/>
 
             <div className={'joinus-label'}>
-                Dołącz do nas<br/><br/>
+                <Link to={'/rekrutacja/wazne-informacje'}><div  id={'banner-link-to-info'}>Dołącz do nas</div></Link><br/><br/>
                 trwa rekrutacja blablablaa<br/>
                 jesteśmy super
             </div>
@@ -54,7 +40,7 @@ const JoinUs = ({jobs}) => {
 
             <div className={'joinus-slicer'}>
 
-                <TextLoop springConfig={{stiffness: 180, damping: 8}} interval={3000} children={jobs.map(x => x.title)}>
+                <TextLoop springConfig={{stiffness: 180, damping: 20}} interval={3000} children={jobs.map(x => x.title)}>
 
                     {jobs.map(item => (
                             <Link to={item.adr} style={{textDecoration: 'none', color: 'white'}}>{item.title}</Link>

@@ -54,6 +54,13 @@
     text-align: right;
 }
 
+.single-article-content-date span {
+    background-color: rgba(255, 103, 0, 0.78);
+    color: white;
+    padding: 2px 5px;
+    white-space: pre;
+}
+
 .single-article-gallery {
     display: flex;
     justify-content: center;
@@ -62,7 +69,10 @@
 .single-article-gallery img {
     max-width: 30%;
     height: intrinsic;
+}
 
+.single-article > h1 {
+    text-decoration: underline #ff6200;
 }
 
 .markdown-content {

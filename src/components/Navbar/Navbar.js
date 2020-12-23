@@ -45,9 +45,9 @@ const Navbar = (props) => {
                             <div className={'arrow'}></div>
                         </div>
                         <div className="dropdown-content">
-                            <a href="#">Ważne informacje</a>
-                            <Link to={'/kierunki-ksztalcenia'}>Kierunki kształcenia</Link>
-                            <a href="#">Dokumenty do pobrania</a>
+                            <Link to={'/rekrutacja/wazne-informacje'}>Ważne informacje</Link>
+                            <Link to={'/rekrutacja/kierunki-ksztalcenia'}>Kierunki kształcenia</Link>
+                            <Link to={'/rekrutacja/dokumenty-do-pobrania'}>Dokumenty do pobrania</Link>
                         </div>
                     </li>
 
@@ -79,7 +79,7 @@ const Navbar = (props) => {
                             <div className={'arrow'}></div>
                         </div>
                         <div className="dropdown-content">
-                            <a href="#">O placówce</a>
+                            <Link to={'/o-nas/o-placowce'}>O placówce</Link>
                             <a href="#">Galeria</a>
                             <a href="#">RODO</a>
                         </div>

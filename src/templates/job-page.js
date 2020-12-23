@@ -1,10 +1,10 @@
 import React from 'react'
-import './sillyPage.css'
+import './job-page.css'
 
 import {graphql} from 'gatsby'
 import MainLayoult from "./main-layoult";
 
-const SillyPage = ({pageContext: {slug}, data: {job}, location}) => {
+const JobPage = ({pageContext: {slug}, data: {job}, location}) => {
     return (
         <MainLayoult location={location} crumbLabel={job.nazwaKierunku}>
             <div className={'silly-content-wrapper'}>
@@ -26,5 +26,5 @@ query fetchJob($slug: String) {
 `
 
 
-export default SillyPage;
+export default JobPage;
 

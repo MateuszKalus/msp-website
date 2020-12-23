@@ -5,10 +5,16 @@
     justify-content: space-around;
     align-items: flex-start;
 
-    margin: 10px;
-    margin-left: 160px;
+    padding: 15px;
+    padding-bottom: 25px;
+    margin-left: 0px;
     color: white;
     font-size: 12px;
+}
+
+.contactbar-wrapper:first-of-type {
+    border-bottom: 1px solid white;
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 .contactbar-icon {
@@ -27,3 +33,7 @@
     text-decoration: none;
     color: white;
 }
+
+/*.contactbar-wrapper a:last-child {*/
+/*    margin-left: 0px auto;*/
+/*}*/

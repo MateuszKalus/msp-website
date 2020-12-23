@@ -2,6 +2,9 @@ import React, {useEffect} from "react"
 import "./main-layoult.css"
 import Navbar from '../components/Navbar/Navbar'
 import ContactBar from '../components/Footer/ContactBar/ContactBar'
+import SlaskLogo from '../images/logo-slaskie-czarne@2x.png'
+import BIPLogo from '../images/bip_logo.png'
+
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 
 const MainLayoult = ({children, location, crumbLabel, ...props}) => {
@@ -89,6 +92,11 @@ const MainLayoult = ({children, location, crumbLabel, ...props}) => {
             <header>
                 <div className={'headerContent'}>
                     <h1>Medyczna Szkoła Policealna</h1>
+                    <div className={'headerContent-logos'}>
+                        <img src={SlaskLogo}/>
+                        <img id={'bip_logo'} src={BIPLogo}/>
+
+                    </div>
                 </div>
 
             </header>
@@ -105,6 +113,7 @@ const MainLayoult = ({children, location, crumbLabel, ...props}) => {
 
             <footer>
                 <div className={'top-footer-section'}>
+                    <span className={'top-footer-section-label'}>SKONTAKTUJ SIĘ Z NAMI:</span>
                     <ContactBar datas={datas[0]}/>
                     <ContactBar datas={datas[1]}/>
                 </div>

@@ -3,14 +3,22 @@
 .single-job {
     position: relative;
     margin: 10px;
-    padding: 20px 0px;
+    padding: 10px 0px 20px;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+}
+
+.single-job > img {
+    margin: 0px 10px;
 }
 
 .single-job-link {
     text-decoration: none;
-    color: #5e5f63;
+    color: #000000;
+}
+
+.single-job-link:hover {
+    text-decoration: underline #ff6200;
 }
 
 .single-job:not(:last-child)::after {

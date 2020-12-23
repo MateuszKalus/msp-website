@@ -12,4 +12,7 @@
 
 .article-date {
     margin-top: 20px;
+    margin-left: auto;
+    padding-right: 10px;
+    text-decoration: underline #ff6200;
 }

@@ -1,5 +1,5 @@
 import React from "react"
-import MainLayoult from "../templates/main-layoult";
+import MainLayoult from "../../templates/main-layoult";
 import './kierunki-ksztalcenia.css'
 import {Link} from "gatsby";
 
@@ -26,6 +26,7 @@ const KierunkiPage = ({data: {jobs}, location}) => {
 
                         return (
                             <div className={'single-job'}>
+                                <img src={'https://www.datocms-assets.com/39399/1608747085-school-24px.svg'}/>
                                 <Link className={'single-job-link'} to={node.jobSlug}><h4>{node.nazwaKierunku}</h4></Link>
                             </div>
                         )

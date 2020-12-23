@@ -118,7 +118,7 @@ main > nav {
     right: 0px;
     background-color: #ffffff;
 
-    min-width: 100%;
+    min-width: 13vw;
     width: fit-content;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;

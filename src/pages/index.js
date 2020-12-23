@@ -14,7 +14,7 @@ import {graphql} from "gatsby";
 
 const IndexPage = ({location, data}) => {
     const jobs = data.allDatoCmsKierunki.edges.map(({node}) => {
-        return {title: node.nazwaKierunku, adr: '/kierunki-ksztalcenia/'+node.jobSlug}
+        return {title: node.nazwaKierunku, adr: 'rekrutacja/kierunki-ksztalcenia/'+node.jobSlug}
     })
 
     return (

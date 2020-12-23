@@ -72,7 +72,7 @@ query MyQuer {
         slug
         tytul
         meta {
-            createdAt(difference: "", formatString: "DD-MM-YYYY")
+            createdAt(difference: "", formatString: "hh:mm      DD/MM/YYYY")
          }
         trescNewsa
         zdjecie {

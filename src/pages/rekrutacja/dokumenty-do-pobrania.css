@@ -1,0 +1,36 @@
+.dokumenty-do-pobrania-content-wrapper ul {
+    margin: 20px;
+    margin-left: 40px;
+}
+
+.dokumenty-do-pobrania-content-wrapper a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.dokumenty-do-pobrania-content-wrapper a:hover {
+    text-decoration: underline;
+    text-decoration-color: #ff6200;
+}
+
+.dokumenty-do-pobrania-content-wrapper ul {
+    list-style:none;
+    padding-left: 1em;
+}
+
+.dokumenty-do-pobrania-content-wrapper li {
+    display: flex;
+    align-items: center;
+}
+
+.dokumenty-do-pobrania-content-wrapper li:before {
+     content: '';
+     display: inline-block;
+     height: 1.5em;
+     width: 1.5em;
+     background-image: url(https://www.datocms-assets.com/39399/1608744939-attachment-24px.svg);
+     background-size: contain;
+     background-repeat: no-repeat;
+     margin-right:0.5em;
+}
+
