@@ -131,6 +131,7 @@ main > nav {
     display: block;
 }
 
+
 .dropdown-content a:hover {
     background-color: rgba(252,161,105,1);
     color: white;

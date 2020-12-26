@@ -5,8 +5,6 @@ import './dokumenty-do-pobrania.css'
 import {graphql, Link} from 'gatsby'
 import MainLayoult from "../../templates/main-layoult";
 
-import ReactPlayer from "react-player";
-import poster from "../../images/zdj_g@2x.png";
 
 
 const DokumentyDoPobraniaPage = ({data: {pliki}, location}) => {

@@ -1,3 +1,4 @@
+
 .aktualnosci-wrapper {
     width: 100%;
     display: flex;
@@ -64,11 +65,17 @@
 .single-article-gallery {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .single-article-gallery img {
-    max-width: 30%;
+    width: 40%;
+    margin: 10px 10px;
     height: intrinsic;
+}
+
+.single-article-gallery img:first-of-type {
+    width: 85%;
 }
 
 .single-article > h1 {
@@ -102,6 +109,10 @@
     align-self: center;
 }
 
+.markdown-content h4 {
+    color: red;
+}
+
 .markdown-content p>img {
     max-width: 80%;
     margin: auto;
@@ -114,6 +125,7 @@
 
 .markdown-content li {
     margin-bottom: 5px;
+    margin-left: 40px;
 }
 
 .markdown-content a {

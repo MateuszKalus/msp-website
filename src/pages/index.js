@@ -19,7 +19,7 @@ const IndexPage = ({location, data}) => {
 
     return (
         <MainLayoult mainPage={true} location={location} crumbLabel="Strona Główna">
-            <JoinUs jobs={jobs}/>
+            <JoinUs jobs={jobs} w1={data.datoCmsHasloNaBannerze.pierwszyWiersz} w2={data.datoCmsHasloNaBannerze.drugiWiersz}/>
             <News />
             <MovieSector />
             <ImportantMessage />
@@ -38,6 +38,11 @@ query FetchJobs {
             }
         }
     }
+    datoCmsHasloNaBannerze {
+        pierwszyWiersz
+        drugiWiersz
+    }
+  
 }
 `
 

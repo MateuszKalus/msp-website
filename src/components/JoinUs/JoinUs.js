@@ -8,7 +8,7 @@ import TextLoop from "react-text-loop";
 // import ReactTextTransition, {presets} from "react-text-transition";
 
 
-const JoinUs = ({jobs}) => {
+const JoinUs = ({jobs, w1, w2}) => {
 
     const [counter, setCounter] = useState(0);
 
@@ -33,8 +33,9 @@ const JoinUs = ({jobs}) => {
 
             <div className={'joinus-label'}>
                 <Link to={'/rekrutacja/wazne-informacje'}><div  id={'banner-link-to-info'}>Dołącz do nas</div></Link><br/><br/>
-                trwa rekrutacja blablablaa<br/>
-                jesteśmy super
+                <p>{w1}</p>
+                <p>{w2}</p>
+
             </div>
             {/*<Link to={jobs[counter].adr}>*/}
 

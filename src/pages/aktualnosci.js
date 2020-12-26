@@ -4,6 +4,7 @@ import './aktualnosci.css'
 import {Link} from "gatsby";
 
 
+
 import {graphql} from "gatsby";
 
 const NewsPage = ({data, location}) => {
@@ -24,20 +25,31 @@ const NewsPage = ({data, location}) => {
 
                     {articles.map(({node}) => {
 
+                        const images = node.dodatkoweObrazki.map(({url}) => {
+                                return (
+                                    {
+                                        src: url,
+                                        title: 'image title',
+                                        description: 'image description'
+                                    }
+                                );
+                            }
+                        );
+
                         return (
                             <div className={'single-article'}>
                                 <h1>{node.tytul}</h1>
                                 <div className={'single-article-content'}>
                                     {node.zdjecie && <img src={node.zdjecie.url}/>}
                                     <div className={'single-article-text markdown-content'}>
-                                        <div dangerouslySetInnerHTML={{__html: node.trescNewsa}} />
+                                        <div dangerouslySetInnerHTML={{__html: node.trescNewsa}}/>
 
                                     </div>
                                     <div className={'single-article-gallery'}>
-                                        {node.dodatkoweObrazki && node.dodatkoweObrazki.map(({url}) => {
-                                                return <img src={url}/>
-                                            }
-                                        )}
+                                        {images.map(({src}) => {
+                                            return <img src={src}/>
+                                        })}
+
                                     </div>
 
                                 </div>

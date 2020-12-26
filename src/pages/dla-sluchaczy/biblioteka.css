@@ -1,0 +1,10 @@
+.biblioteka {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.biblioteka img {
+    width: 40%;
+    height: 100%;
+    height: intrinsic;}
