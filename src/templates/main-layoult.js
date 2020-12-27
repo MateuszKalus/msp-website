@@ -6,6 +6,7 @@ import SlaskLogo from '../images/logo-slaskie-czarne@2x.png'
 import BIPLogo from '../images/bip_logo.png'
 
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
+import {Link} from "gatsby";
 
 const MainLayoult = ({children, location, crumbLabel, ...props}) => {
 
@@ -91,10 +92,10 @@ const MainLayoult = ({children, location, crumbLabel, ...props}) => {
         <main>
             <header>
                 <div className={'headerContent'}>
-                    <h1>Medyczna Szkoła Policealna</h1>
+                    <Link to={'/'}><h1>Medyczna Szkoła Policealna</h1></Link>
                     <div className={'headerContent-logos'}>
-                        <img src={SlaskLogo}/>
-                        <img id={'bip_logo'} src={BIPLogo}/>
+                        <Link to={'https://www.slaskie.pl'} target="_blank"><img src={SlaskLogo}/></Link>
+                        <Link to={'https://bip-slaskie.pl/mszsosn'} dtarget="_blank"><img id={'bip_logo'} src={BIPLogo}/></Link>
 
                     </div>
                 </div>

@@ -36,7 +36,7 @@ const News = (props) => {
 
                     let pathToImg;
                     if (!node.zdjecie) {
-                        pathToImg = 'https://www.datocms-assets.com/39399/1608351709-8073291-snake-texture.jpg';
+                        pathToImg = 'https://www.datocms-assets.com/39399/1608740108-medycyna-pracy-vita-medica-1280x800.jpg';
                     } else pathToImg = node.zdjecie.url;
 
                     return (
