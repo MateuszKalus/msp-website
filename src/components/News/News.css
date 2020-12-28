@@ -75,3 +75,38 @@
     margin-left: 15px;
     margin-right: 0px;
 }
+
+@media (max-width: 1023px) {
+
+
+    .news-wrapper {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 600px) {
+    .news-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .article-wrapper {
+        display: none;
+    }
+
+    .article-img > img {
+        width: 70%;
+    }
+
+    .article-wrapper:first-of-type {
+        display: block;
+        margin: 0px;
+    }
+
+    .news-headline {
+        font-size: 2vw;
+        height: auto;
+        padding: 5px 5px;
+    }
+}

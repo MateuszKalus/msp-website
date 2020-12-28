@@ -16,3 +16,13 @@
     padding-right: 10px;
     text-decoration: underline #ff6200;
 }
+
+@media (max-width: 600px) {
+    .article-img > img {
+        width: 70%;
+    }
+
+    .article-img {
+        text-align: center;
+    }
+}

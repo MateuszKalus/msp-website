@@ -159,3 +159,38 @@ main > nav {
         transform: scaleY(1)
     }
 }
+
+
+#bip_logo {
+    padding: 10px 0px;
+}
+
+@media (max-width: 1450px) {
+
+    .navbar-full-resolution {
+        display: none;
+    }
+
+    .headerContent {
+        width: 100%;
+        font-size: 1.5vw;
+        height: auto;
+        padding: 5px 15px;
+    }
+
+    .header {
+        height: 5vw;
+    }
+
+    .headerContent-logos {
+        height: 5vw;
+    }
+
+    #bip_logo {
+        padding: 2px 0px;
+    }
+
+
+}
+
+

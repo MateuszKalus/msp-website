@@ -95,3 +95,32 @@
 .joinus-slicer-content {
     display: none;
 }
+
+@media (max-width: 1450px) {
+
+    .joinus-label {
+        font-size: 2vw;
+    }
+
+    .joinus-slicer {
+        font-size: 2vw;
+        height: 5vw;
+        bottom: 10px;
+        max-width: 60vw;
+    }
+}
+
+@media (max-width: 1023px) {
+    .joinus-slicer {
+        bottom: 2vw;
+        left: 2vw;
+    }
+
+    .joinus-label {
+        left: 2vw;
+    }
+
+    .joinus-wrapper {
+        margin-top: 5px;
+    }
+}

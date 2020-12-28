@@ -41,7 +41,7 @@ const News = (props) => {
 
                     return (
                         <Article classes={'article-wrapper'} key={article_name + counter} imgURL={pathToImg}
-                                 opisKrotki={node.opisKrotki} date={node.meta.publishedAt}/>
+                                 opisKrotki={node.opisKrotki} tytul={node.tytul} date={node.meta.publishedAt}/>
                     )
                 }
             )

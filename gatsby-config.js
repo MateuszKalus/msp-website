@@ -1,3 +1,7 @@
+require("dotenv").config({
+    path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
     siteMetadata: {
         title: "MSP-website",
@@ -24,7 +28,7 @@ module.exports = {
         {
             resolve: "gatsby-source-datocms",
             options: {
-                apiToken: "9fad847465dac027ad4706570eb78d",
+                apiToken: process.env.DATOCMD_API_TOKEN,
                 preview: false,
                 disableLiveReload: false,
             },

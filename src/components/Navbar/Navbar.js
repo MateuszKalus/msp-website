@@ -30,7 +30,7 @@ const Navbar = (props) => {
                     </Link>
                 </div>
 
-                <ul className={'navbar-content'}>
+                <ul className={'navbar-content navbar-full-resolution'}>
                     <li className="dropdown">
                         <Link to={'/aktualnosci'}>
                             <div className="dropbtn">AKTUALNOŚCI</div>
@@ -79,15 +79,15 @@ const Navbar = (props) => {
                         </div>
                         <div className="dropdown-content">
                             <Link to={'/o-nas/o-placowce'}>O placówce</Link>
-                            <a href="#">Galeria</a>
-                            <a href="#">RODO</a>
+                            <Link to={'/o-nas/galeria'}>Galeria</Link>
+                            <Link to={'/o-nas/rodo'}>RODO</Link>
                         </div>
                     </li>
 
                     <li className="dropdown">
-                        <a href={'#'}>
+                        <Link to={'/kontakt'}>
                             <div className="dropbtn">KONTAKT</div>
-                        </a>
+                        </Link>
                         <div className="dropdown-content">
                         </div>
                     </li>

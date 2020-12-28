@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "_default": {
+      "link": "mcu-website"
+    },
+    "mcu-website": {
+      "applicationId": "5AzyoW4ZzvRWVEhxh5yAcHO2qzvnnmx88FNSf0ho"
+    }
+  }
+}

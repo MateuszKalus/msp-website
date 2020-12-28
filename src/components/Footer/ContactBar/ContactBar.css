@@ -37,3 +37,28 @@
 /*.contactbar-wrapper a:last-child {*/
 /*    margin-left: 0px auto;*/
 /*}*/
+
+@media (max-width: 1023px) {
+
+    .contactbar-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contactbar-wrapper > div {
+        margin-top: 10px;
+    }
+
+    .contactbar-wrapper > a {
+        margin-top: 10px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .contactbar-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+}

@@ -16,16 +16,19 @@ const MovieSector = (props) => {
 
             </div>
 
-            <ReactPlayer width={'55%'} height={'auto'} controls={true}
-                         url='https://www.datocms-assets.com/39399/1608526566-100000006492223992090072240218708198396691n.mp4'
-                         config={{
-                             file: {
-                                 attributes: {
-                                     poster: poster
+            <div className={'video-wrapper'}>
+                <ReactPlayer width={'100%'} height={'auto'} controls={true}
+                             url='https://www.datocms-assets.com/39399/1608526566-100000006492223992090072240218708198396691n.mp4'
+                             config={{
+                                 file: {
+                                     attributes: {
+                                         poster: poster
+                                     }
                                  }
-                             }
-                         }}
-            />
+                             }}
+                />
+            </div>
+
 
             <div className={'moviesector-bg-after'}>
                 <div className={'moviesector-bg-inner'}>
