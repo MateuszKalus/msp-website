@@ -153,7 +153,7 @@
         font-size: 4vw;
         left: 2vw;
         top: 50%;
-        text-shadow: -2px 0 #383834, 0 2px #383834, 2px 0 #383834, 0 -2px #383834;
+        text-shadow: -2px 0 2px #383834, 0 2px 2px #383834, 2px 0 2px #383834, 0 -2px 2px #383834;
 
     }
 
