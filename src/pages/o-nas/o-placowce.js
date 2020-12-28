@@ -15,16 +15,21 @@ const OPlacowcePage = ({data: {info}, location}) => {
             <div className={'silly-content-wrapper markdown-content'}>
 
                 <div dangerouslySetInnerHTML={{__html: info.tresc}}/>
-                <ReactPlayer width={'55%'} height={'auto'} controls={true} style={{margin: 'auto'}}
-                             url='https://www.datocms-assets.com/39399/1608741281-rcku-reklama.mp4'
-                             config={{
-                                 file: {
-                                     attributes: {
-                                         poster: poster
+
+                <div className={'around-video'}>
+
+                    <ReactPlayer width={'100%'} height={'auto'} controls={true} style={{margin: 'auto'}}
+                                 url='https://www.datocms-assets.com/39399/1608741281-rcku-reklama.mp4'
+                                 config={{
+                                     file: {
+                                         attributes: {
+                                             poster: poster
+                                         }
                                      }
-                                 }
-                             }}
-                />
+                                 }}
+                    />
+
+                </div>
 
             </div>
 

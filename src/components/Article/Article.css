@@ -19,7 +19,7 @@
 
 @media (max-width: 600px) {
     .article-img > img {
-        width: 70%;
+        width: 100%;
     }
 
     .article-img {

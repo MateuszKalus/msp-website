@@ -4,3 +4,13 @@
     outline: none;
     /*border: 10px solid gray;*/
 }
+
+.around-video {
+    width: 65%;
+}
+
+@media (max-width: 600px) {
+    .around-video {
+        width: 100%;
+    }
+}

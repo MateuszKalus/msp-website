@@ -144,3 +144,13 @@
     padding-top: 0.5em;
     padding-bottom: 0.5em;
 }
+
+@media (max-width: 1023px) {
+    .aktualnosci-wrapper {
+        padding: 0px;
+    }
+
+    .aktualnosci-content-wrapper {
+        padding: 0px;
+    }
+}

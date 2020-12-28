@@ -6,3 +6,17 @@
 .single-gallery {
     margin: 50px;
 }
+
+@media (max-width: 1024px) {
+    .silly-content-wrapper {
+        padding: 25px;
+    }
+
+    .markdown-content li {
+        margin-left: 5px;
+    }
+
+    .single-gallery {
+        margin: 20px 0px;
+    }
+}

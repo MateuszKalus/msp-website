@@ -165,4 +165,22 @@ footer {
     .section-content {
         width: 98vw;
     }
+
+    .breadcrumb__item {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .section-content {
+        width: 98vw;
+        padding: 0px;
+    }
+
+    .center-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

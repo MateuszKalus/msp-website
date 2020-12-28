@@ -15,11 +15,12 @@ const StyledLabel = styled.label`
 
 const StyledSelect = styled.select`
     margin-bottom: 15px;
+    border: 1px solid black;
 `
 
 const StyledInput = styled.input`
     display: block;
-    border: 2px solid black;
+    border: 1px solid black;
     background: none;
     height: ${({as}) => as ? '200px' : 'auto'};
     width: ${({as}) => as ? '500px' : '300px'};
@@ -72,7 +73,7 @@ const KontaktPage = ({data: {info}, location}) => {
                           isSubmitting
                           /* and other goodies */
                       }) => (
-                        <form onSubmit={handleSubmit}>
+                        <form onSubmit={handleSubmit} className={'center-form'}>
                             <StyledLabel htmlFor={"name"}>Imię:</StyledLabel>
                             <StyledInput type={'text'}
                                          name={'name'}
