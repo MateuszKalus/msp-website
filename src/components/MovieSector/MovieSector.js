@@ -2,6 +2,7 @@ import React from "react"
 import "./MovieSector.css"
 import ReactPlayer from "react-player";
 import poster from "../../images/zdj_g@2x.png";
+import {Link} from "gatsby";
 
 const MovieSector = (props) => {
 
@@ -46,6 +47,9 @@ const MovieSector = (props) => {
                 </div>
             </div>
 
+            <div className={'moviesector-about'}>
+                <Link to={'o-nas/o-placowce'}>Dowiedz się o nas więcej ></Link>
+            </div>
         </div>
 
     )

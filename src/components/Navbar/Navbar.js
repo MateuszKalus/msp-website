@@ -3,6 +3,9 @@ import "./Navbar.css";
 import Logo from '../../images/logo_rcku.png';
 import {graphql, Link, useStaticQuery} from "gatsby";
 
+import HamburgerIcon from "../../images/menu-24px.svg"
+import HamburgerIconBlack from "../../images/menu-24px_black.svg"
+
 const Navbar = (props) => {
 
     if (typeof window !== `undefined`) {
@@ -30,7 +33,8 @@ const Navbar = (props) => {
                 <li className={'dropdown-low'}>
 
                     <div className={'dropbtn-low'}>
-                        <span>MENU</span>
+                        <span><img className={'hamburger-icon hamburger-white'} src={HamburgerIcon}/>
+                        <img className={'hamburger-icon hamburger-black'} src={HamburgerIconBlack}/></span>
                     </div>
 
                     <div className={'dropdown-content-low'}>
