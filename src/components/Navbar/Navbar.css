@@ -242,6 +242,40 @@ main > nav {
 }
 
 @media (max-width: 1450px) {
+    .dropbtn {
+        font-size: 0.9vw;
+    }
+
+
+    .header {
+        height: 5vw;
+    }
+
+    .headerContent-logos {
+        height: 5vw;
+    }
+
+    #bip_logo {
+        padding: 2px 0px;
+    }
+
+    .headerContent {
+        font-size: 1.2vw;
+        height: auto;
+        padding: 5px 15px;
+    }
+
+
+}
+
+@media (max-width: 1024px) {
+
+    .headerContent {
+        width: 100%;
+        font-size: 1.5vw;
+        height: auto;
+        padding: 5px 15px;
+    }
 
     .navbar-full-resolution {
         display: none;
@@ -257,12 +291,12 @@ main > nav {
         display: block;
     }
 
-    .inner-navbar > ul > li > div{
+    .inner-navbar > ul > li > div {
         font-size: 4vw;
 
     }
 
-    .inner-navbar > ul > li > a >div{
+    .inner-navbar > ul > li > a > div {
         font-size: 4vw;
 
     }
@@ -283,7 +317,7 @@ main > nav {
 
         min-width: 100%;
         width: fit-content;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
     }
 
@@ -297,7 +331,7 @@ main > nav {
     }
 
     .dropbtn {
-        display:flex;
+        display: flex;
         justify-content: flex-start;
         align-items: center;
         padding-left: 20px;
@@ -310,32 +344,10 @@ main > nav {
         border: none;
     }
 
-
-    .headerContent {
-        width: 100%;
-        font-size: 1.5vw;
-        height: auto;
-        padding: 5px 15px;
-    }
-
-    .header {
-        height: 5vw;
-    }
-
-    .headerContent-logos {
-        height: 5vw;
-    }
-
-    #bip_logo {
-        padding: 2px 0px;
-    }
-
     main > nav > .inner-navbar {
         width: 100vw;
         padding-left: 0px;
     }
-
-
 }
 
 @media (max-width: 600px) {
