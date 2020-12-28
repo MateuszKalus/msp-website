@@ -163,7 +163,7 @@ footer {
 @media (max-width: 1023px) {
 
     .section-content {
-        width: 98vw;
+        width: 100vw;
     }
 
     .breadcrumb__item {
@@ -174,7 +174,7 @@ footer {
 @media (max-width: 600px) {
 
     .section-content {
-        width: 98vw;
+        width: 100vw;
         padding: 0px;
     }
 

@@ -4,7 +4,10 @@ require("dotenv").config({
 
 module.exports = {
     siteMetadata: {
-        title: "MSP-website",
+        title: `Medyczna Szkoła Policealna`,
+        siteUrl: `https://www.rcku.nazwa.pl`,
+        description: `Dołącz do Medycznej Szkoły Policealnej!`,
+        image: "/images/zdj_g@2x.png"
     },
     plugins: [
         `gatsby-plugin-remove-trailing-slashes`,

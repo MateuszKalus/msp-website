@@ -129,3 +129,40 @@
         margin-top: 5px;
     }
 }
+
+@media (max-width: 600px) {
+
+    .joinus-wrapper {
+        margin-top: 0px;
+    }
+
+    .joinus-wrapper > img {
+        width: 100%;
+        /*height: intrinsic;*/
+        height: 40vh;
+        object-fit: cover;
+        object-position: 80% 100%;
+        right: 0;
+        /*max-height: fit-content;*/
+        transition: .3s ease-in-out;
+        background-size: cover;
+        /*object-fit: contain;*/
+    }
+
+    .joinus-label {
+        font-size: 4vw;
+        left: 2vw;
+        top: 50%;
+        text-shadow: -2px 0 #383834, 0 2px #383834, 2px 0 #383834, 0 -2px #383834;
+
+    }
+
+    .joinus-slicer {
+
+        font-size: 4vw;
+        bottom: 8vw;
+        left: 2vw;
+        height: 6vw;
+        max-width: fit-content;
+    }
+}

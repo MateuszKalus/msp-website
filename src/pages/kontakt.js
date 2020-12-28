@@ -43,6 +43,7 @@ const StyledInput = styled.input`
 
 const Alert = styled.div`
     display: ${({displayAlert}) => displayAlert ? 'inline-block' : 'none'};
+    margin-left: 10px;
 `
 
 const Button = styled.button`
