@@ -1,8 +1,11 @@
 .joinus-wrapper > img {
     width: 100%;
-    height: intrinsic;
+    /*height: intrinsic;*/
+    height: 100%;
+    max-height: fit-content;
     transition: .3s ease-in-out;
     background-size: cover;
+    object-fit: contain;
 }
 
 .joinus-wrapper:hover > img {

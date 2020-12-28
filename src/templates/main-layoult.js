@@ -8,6 +8,10 @@ import BIPLogo from '../images/bip_logo.png'
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 import {Link} from "gatsby";
 
+
+
+
+
 const MainLayoult = ({children, location, crumbLabel, ...props}) => {
 
 
@@ -88,6 +92,8 @@ const MainLayoult = ({children, location, crumbLabel, ...props}) => {
         }
     })
 
+
+
     return (
         <main>
             <header>
@@ -106,6 +112,7 @@ const MainLayoult = ({children, location, crumbLabel, ...props}) => {
             <section>
                 <div className={'section-content'}>
                     <Breadcrumb location={location} crumbLabel={crumbLabel} />
+
                     {children}
 
                 </div>

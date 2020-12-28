@@ -71,7 +71,8 @@
 .single-article-gallery img {
     width: 40%;
     margin: 10px 10px;
-    height: intrinsic;
+    height: 40%;
+    /*height: intrinsic;*/
 }
 
 .single-article-gallery img:first-of-type {
