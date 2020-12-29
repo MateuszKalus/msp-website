@@ -66,6 +66,7 @@ main > section {
     background-color: #ffffff;
     display: flex;
     justify-content: center;
+    overflow-x: hidden;
 }
 
 .section-content {
@@ -81,6 +82,8 @@ footer {
 
     display: flex;
     flex-direction: column;
+
+    overflow-x: hidden;
 
 }
 
