@@ -40,7 +40,7 @@ module.exports = {
         {
             resolve: "gatsby-plugin-manifest",
             options: {
-                icon: "src/images/logo_rcku.png",
+                icon: "src/images/fav.png",
             },
         },
     ],
