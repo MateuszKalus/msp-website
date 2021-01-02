@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import "./JoinUs.css"
 import JoinUsImg from '../../images/zdj_g@2x.png'
-import {graphql, Link} from 'gatsby'
+import { Link} from 'gatsby'
 
 import TextLoop from "react-text-loop";
 
@@ -11,12 +11,13 @@ import TextLoop from "react-text-loop";
 const JoinUs = ({jobs, w1, w2}) => {
 
     const [counter, setCounter] = useState(0);
-
+    const howManyJobs = jobs.length || 0;
 
     useEffect(() => {
+
         const interval = setInterval(() => {
 
-            if (counter === jobs.length - 1) {
+            if (counter === howManyJobs - 1) {
                 setCounter(0);
             } else {
                 setCounter(counter + 1);
@@ -24,7 +25,8 @@ const JoinUs = ({jobs, w1, w2}) => {
 
         }, 2000);
         return () => clearInterval(interval);
-    }, [counter]);
+
+    }, [counter, howManyJobs]);
 
 
     return (

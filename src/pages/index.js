@@ -7,9 +7,7 @@ import JoinUs from "../components/JoinUs/JoinUs";
 import MovieSector from "../components/MovieSector/MovieSector";
 import ImportantMessage from "../components/ImportantMessage/ImportantMessage";
 
-import ReactPlayer from 'react-player'
 
-import poster from '../images/zdj_g@2x.png'
 import {graphql} from "gatsby";
 
 const IndexPage = ({location, data}) => {

@@ -73,7 +73,7 @@
     /*transform:  rotateX(21deg) rotateY(-10deg) rotateZ(1deg) scale(0.95);*/
 
     height: 50px;
-    width: 550px;
+    /*width: fit-content;*/
     background-color: rgba(255,98,0,0.7);
 
     position: absolute;

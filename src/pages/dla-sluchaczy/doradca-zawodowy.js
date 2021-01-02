@@ -13,7 +13,7 @@ const BibliotekaPage = ({data: {info}, location}) => {
                 <div dangerouslySetInnerHTML={{__html: info.tre}}/>
                 <div className={'single-article-gallery'}>
                     {info.galeriaObrazkWDodatkowych.map(({url}) => {
-                        return <img src={url}/>
+                        return <img src={url} alt={url}/>
                     })}
                 </div>
             </div>

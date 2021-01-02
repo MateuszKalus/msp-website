@@ -1,6 +1,11 @@
 const path = require(`path`)
 
 
+exports.onCreateNode = ({ node }) => {
+    console.log(node.internal.type)
+}
+
+
 exports.createPages = async ({graphql, actions}) => {
     const {createPage} = actions;
     const blogPostTemplate = path.resolve('./src/templates/job-page.js');

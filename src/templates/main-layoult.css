@@ -1,13 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 
+}
+
+h3 {
+    font-family: Montserrat;
+    font-weight: 600;
+}
+
+h3 * {
+    font-family: inherit;
+}
+
+h1 {
+    font-family: Montserrat;
+    font-weight: 600;
+}
+
+h1 * {
+    font-family: inherit;
+}
+
+.news-headline {
+    font-family: Montserrat;
+}
+
+.news-headline * {
+    font-family: inherit;
+}
+
+.breadcrumb {
+    font-family: Montserrat;
+}
+
+.breadcrumb * {
+    font-family: inherit;
+}
+
+.top-footer-section-label {
+    font-family: Montserrat;
+}
+
+.bottom-footer-section {
+    font-family: Montserrat;
+}
+
+.bottom-footer-section * {
+    font-family: inherit;
+}
+
+header * {
+    font-family: inherit;
+}
+
+nav * {
+    font-family: inherit;
 }
 
 html, body {
@@ -32,6 +86,7 @@ header {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    font-family: 'Montserrat';
 }
 
 .headerContent {

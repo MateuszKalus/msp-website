@@ -1,7 +1,7 @@
-import React, {useEffect} from "react";
+import React from "react";
 import "./Navbar.css";
 import Logo from '../../images/logo_rcku.png';
-import {graphql, Link, useStaticQuery} from "gatsby";
+import { Link } from "gatsby";
 
 import HamburgerIcon from "../../images/menu-24px.svg"
 import HamburgerIconBlack from "../../images/menu-24px_black.svg"
@@ -15,7 +15,7 @@ const Navbar = (props) => {
 
         function scrollFunction() {
 
-            if (typeof document.getElementById("navbar") != null) {
+            if (document.getElementById("navbar") !== null) {
                 if (document.body.scrollTop > 170 || document.documentElement.scrollTop > 170) {
                     document.getElementById("navbar").style.width = '75vw';
                 } else {
@@ -33,8 +33,8 @@ const Navbar = (props) => {
                 <li className={'dropdown-low'}>
 
                     <div className={'dropbtn-low'}>
-                        <span><img className={'hamburger-icon hamburger-white'} src={HamburgerIcon}/>
-                        <img className={'hamburger-icon hamburger-black'} src={HamburgerIconBlack}/></span>
+                        <span><img className={'hamburger-icon hamburger-white'} src={HamburgerIcon} alt={'hamburger_white'}/>
+                        <img className={'hamburger-icon hamburger-black'} src={HamburgerIconBlack} alt={'hamburger_black'}/></span>
                     </div>
 
                     <div className={'dropdown-content-low'}>
@@ -183,20 +183,5 @@ const Navbar = (props) => {
     )
 }
 
-
-const ComponentName = () => {
-    const data = useStaticQuery(graphql`
-    {
-      allDatoCmsArticlemodel {
-        edges {
-          node {
-            zawarto
-          }
-        }
-      }
-    }
-  `)
-    return <p>{data.allDatoCmsArticlemodel.edges[1].node.zawarto}</p>
-}
 
 export default Navbar;

@@ -1,8 +1,6 @@
 import React from "react"
 import MainLayoult from "../templates/main-layoult";
 import './aktualnosci.css'
-import {Link} from "gatsby";
-
 
 
 import {graphql} from "gatsby";
@@ -40,14 +38,14 @@ const NewsPage = ({data, location}) => {
                             <div className={'single-article'}>
                                 <h1>{node.tytul}</h1>
                                 <div className={'single-article-content'}>
-                                    {node.zdjecie && <img src={node.zdjecie.url}/>}
+                                    {node.zdjecie && <img src={node.zdjecie.url} alt={node.zdjecie.url}/>}
                                     <div className={'single-article-text markdown-content'}>
                                         <div dangerouslySetInnerHTML={{__html: node.trescNewsa}}/>
 
                                     </div>
                                     <div className={'single-article-gallery'}>
                                         {images.map(({src}) => {
-                                            return <img src={src}/>
+                                            return <img src={src} alt={src}/>
                                         })}
 
                                     </div>

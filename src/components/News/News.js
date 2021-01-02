@@ -40,7 +40,7 @@ const News = (props) => {
                     } else pathToImg = node.zdjecie.url;
 
                     return (
-                        <Article classes={'article-wrapper'} key={article_name + counter} imgURL={pathToImg}
+                        <Article classes={'article-wrapper'} key={article_name + counter} counter={counter} imgURL={pathToImg}
                                  opisKrotki={node.opisKrotki} tytul={node.tytul} date={node.meta.publishedAt}/>
                     )
                 }

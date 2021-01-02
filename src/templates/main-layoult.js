@@ -44,7 +44,7 @@ const MainLayoult = ({children, location, crumbLabel, ...props}) => {
                     wew. 24 - Główna Księgowa<br/>
                 </>,
             fb: {
-                labet:
+                label:
                     <>
                         Sosnowiec
                     </>,
@@ -73,7 +73,7 @@ const MainLayoult = ({children, location, crumbLabel, ...props}) => {
                     (32) 671-21-01<br/>
                 </>,
             fb: {
-                labet:
+                label:
                     <>
                         Zawiercie
                     </>,
@@ -100,8 +100,8 @@ const MainLayoult = ({children, location, crumbLabel, ...props}) => {
                 <div className={'headerContent'}>
                     <Link to={'/'}><h1>Medyczna Szkoła Policealna</h1></Link>
                     <div className={'headerContent-logos'}>
-                        <Link to={'https://www.slaskie.pl'} target="_blank"><img src={SlaskLogo}/></Link>
-                        <Link to={'https://bip-slaskie.pl/mszsosn'} dtarget="_blank"><img id={'bip_logo'} src={BIPLogo}/></Link>
+                        <Link to={'https://www.slaskie.pl'} target="_blank"><img src={SlaskLogo} alt={'slask_logo'}/></Link>
+                        <Link to={'https://bip-slaskie.pl/mszsosn'} dtarget="_blank"><img id={'bip_logo'} src={BIPLogo} alt={'bip_logo'}/></Link>
 
                     </div>
                 </div>
@@ -128,7 +128,7 @@ const MainLayoult = ({children, location, crumbLabel, ...props}) => {
                 <div className={'bottom-footer-section'}>
                     <div className={'bottom-footer-section-label'}>
                         <span>Polityka prywatności i cookies</span>
-                        <span>© KomDżaKal</span>
+                        <span>© Created by MDK</span>
                     </div>
 
                 </div>

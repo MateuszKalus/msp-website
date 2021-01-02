@@ -8,9 +8,6 @@ import "react-image-gallery/styles/css/image-gallery.css";
 import {graphql} from 'gatsby'
 import MainLayoult from "../../templates/main-layoult";
 
-import ReactPlayer from "react-player";
-import poster from "../../images/zdj_g@2x.png";
-
 
 const GaleriaPage = ({data: {info}, location}) => {
     return (
