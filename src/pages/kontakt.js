@@ -19,19 +19,29 @@ outline-color: #ff6200;
 `;
 
 const StyledSelect = styled.select`
-outline-color: #ff6200;
+    
+    outline: none;
+    -webkit-appearance:none;
+
     padding: 5px;
     margin-bottom: 15px;
     border: 1px solid black;
+    border-radius: 6px;
     height: auto;
     width: 300px;
     max-width: 80%;
-`
+    
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+`;
 
 const StyledInput = styled.input`
+    outline: none;
     outline-color: #ff6200;
     display: block;
     border: 1px solid black;
+    border-radius: 6px;
     background: none;
     padding: 5px;
     height: ${({as}) => as ? '200px' : 'auto'};
@@ -39,7 +49,72 @@ const StyledInput = styled.input`
     max-width: 80%;
     margin-bottom: 25px;
     
+    &:focus {
+        border-color: orange;   
+        -webkit-box-shadow: 0px 0px 4px 0px rgba(50, 50, 50, 0.75);
+        -moz-box-shadow:    0px 0px 4px 0px rgba(50, 50, 50, 0.75);
+        box-shadow:         0px 0px 4px 0px rgba(50, 50, 50, 0.75);
+ 
+    }
+    
 `;
+
+const StyledRadio = styled.input`
+    outline-color: #ff6200;
+    margin: 0px;
+    display: inline-block;
+    background: none;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    visibility: visible;
+    display: none;
+    
+    
+`;
+
+const StyledRadioLabel = styled.label`
+    position: relative;
+    
+    &:before {
+       content: '';
+       display: inline-block;
+       border: 2px solid black;
+       border-radius: 50%;
+       width: 14px;
+       height: 14px;
+       position: absolute;
+       right: -20px;
+       top: 50%;
+       box-sizing: border-box;
+       transform: translateY(-50%) translateX(50%);
+       padding:4px;
+       
+       background-color: transparent;
+       }
+       
+    &:after {
+       content: '';
+       display: inline-block;
+       border: 2px solid white;
+       border-radius: 50%;
+       width: 10px;
+       height: 10px;
+       position: absolute;
+       right: -20px;
+       top: 50%;
+       box-sizing: border-box;
+       transform: translateY(-50%) translateX(50%);
+       padding:4px;
+       
+       background-color: transparent;
+       
+       
+       }
+    }
+       
+`
 
 const Alert = styled.div`
     display: ${({displayAlert}) => displayAlert ? 'inline-block' : 'none'};
@@ -64,6 +139,20 @@ outline-color: #ff6200;
 
     }   
 `;
+
+const StyledDivForCustomRadio = styled.div`
+    display: inline-block;
+    margin-right: 50px;
+    margin-bottom: 25px;
+
+    & input:checked ~ label:before {
+        background-color: #ff6200;
+        
+        -webkit-box-shadow: 0px 0px 4px 0px rgba(50, 50, 50, 0.75);
+        -moz-box-shadow:    0px 0px 4px 0px rgba(50, 50, 50, 0.75);
+        box-shadow:         0px 0px 4px 0px rgba(50, 50, 50, 0.75);
+    }
+`
 
 
 const KontaktPage = ({data: {info}, location, pageContext}) => {
@@ -92,11 +181,11 @@ const KontaktPage = ({data: {info}, location, pageContext}) => {
     return (
 
         <MainLayoult location={location} crumbLabel={'Kontakt'} crumbs={crumbs}>
-            <div className={'alert-sent'}>Wiadomośc została wysłana</div>
+            <div className={'alert-sent'}>Wiadomość została wysłana</div>
             <div className={'silly-content-wrapper markdown-content'}>
 
                 <Formik
-                    initialValues={{name: '', email: '', kierunek: '', message: ''}}
+                    initialValues={{name: '', email: '', kierunek: '', message: '', phone: '', contactway: ''}}
 
                     onSubmit={(values, {setSubmitting, resetForm}) => {
                         const headers = {
@@ -155,15 +244,54 @@ const KontaktPage = ({data: {info}, location, pageContext}) => {
                                          value={values.name}
                             />
 
-                            <StyledLabel htmlFor={"e-mail"}>E-mail:</StyledLabel>
+                            <StyledLabel htmlFor={"email"}>E-mail:</StyledLabel>
                             <StyledInput required
-                                         type={'e-mail'}
+                                         type={'email'}
                                          name={'email'}
                                          id={'email'}
                                          onChange={handleChange}
                                          onBlur={handleBlur}
                                          value={values.email}
+                                         pattern={"[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"}
                             />
+
+                            <StyledLabel htmlFor={"phone"}>Telefon:</StyledLabel>
+                            <StyledInput required
+                                         type={'tel'}
+                                         name={'phone'}
+                                         id={'phone'}
+                                         onChange={handleChange}
+                                         onBlur={handleBlur}
+                                         value={values.phone}
+                                         pattern="^\s*(?:\+?(\d{1,3}))?([-. (]*(\d{3})[-. )]*)?((\d{3})[-. ]*(\d{2,4})(?:[-.x ]*(\d+))?)\s*$"
+                            />
+
+                            <StyledLabel htmlFor={"contactway"}>Preferowana forma kontaktu:</StyledLabel>
+
+                            <StyledDivForCustomRadio>
+                                <StyledRadio
+                                             type={'radio'}
+                                             name={'contactway'}
+                                             id={'contactway--phone'}
+                                             onChange={handleChange}
+                                             onBlur={handleBlur}
+                                             value={'telefoniczna'}
+                                />
+                                <StyledRadioLabel htmlFor="contactway--phone">telefoniczna</StyledRadioLabel>
+                            </StyledDivForCustomRadio>
+
+                            <StyledDivForCustomRadio>
+                                <StyledRadio
+                                             type={'radio'}
+                                             name={'contactway'}
+                                             id={'contactway--email'}
+                                             onChange={handleChange}
+                                             onBlur={handleBlur}
+                                             value={'e-mailowa'}
+                                />
+                                <StyledRadioLabel htmlFor="contactway--email">e-mailowa</StyledRadioLabel>
+                            </StyledDivForCustomRadio>
+
 
                             <StyledLabel htmlFor={"kierunek"}>Którego kierunku dotyczy pytanie?</StyledLabel>
                             <StyledSelect name={'kierunek'} id={"kierunek"} required
@@ -174,7 +302,7 @@ const KontaktPage = ({data: {info}, location, pageContext}) => {
                                 <option value="" selected disabled hidden>-- wybierz kierunek --</option>
                                 <option value="Pytanie ogólne">Pytanie ogólne</option>
                                 {info.edges.map(({node}) => {
-                                    return <option value={node.nazwaKierunku}>{node.nazwaKierunku}</option>
+                                    return <option value={node.nazwaKierunku} key={node.nazwaKierunku}>{node.nazwaKierunku}</option>
                                 })}
 
                             </StyledSelect>
