@@ -5,9 +5,14 @@ import './biblioteka.css'
 import {graphql} from 'gatsby'
 import MainLayoult from "../../templates/main-layoult";
 
-const BibliotekaPage = ({data: {info}, location}) => {
+const BibliotekaPage = ({data: {info}, location, pageContext}) => {
+
+    const {
+        breadcrumb: { crumbs },
+    } = pageContext;
+
     return (
-        <MainLayoult location={location} crumbLabel={'Biblioteka'}>
+        <MainLayoult location={location} crumbLabel={'Biblioteka'} crumbs={crumbs}>
             <div className={'biblioteka silly-content-wrapper markdown-content'}>
                 <div dangerouslySetInnerHTML={{__html: info.tre}}/>
                 {info.zdjecie && <img src={info.zdjecie.url} alt={info.zdjecie.url}/>}

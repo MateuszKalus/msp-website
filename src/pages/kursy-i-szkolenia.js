@@ -4,11 +4,14 @@ import '../templates/job-page.css'
 import {graphql} from 'gatsby'
 import MainLayoult from "../templates/main-layoult";
 
-const KursyISzkoleniaPage = ({data: {info}, location}) => {
+const KursyISzkoleniaPage = ({data: {info}, location, pageContext}) => {
 
+    const {
+        breadcrumb: { crumbs },
+    } = pageContext;
 
     return (
-        <MainLayoult location={location} crumbLabel={'Kursy i szkolenia'}>
+        <MainLayoult location={location} crumbLabel={'Kursy i szkolenia'} crumbs={crumbs}>
             <div className={'silly-content-wrapper markdown-content'}>
                 <div dangerouslySetInnerHTML={{__html: info.tre}}/>
 

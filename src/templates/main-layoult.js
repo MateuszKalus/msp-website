@@ -12,8 +12,11 @@ import {Link} from "gatsby";
 
 
 
-const MainLayoult = ({children, location, crumbLabel, ...props}) => {
+const MainLayoult = ({children, location, crumbLabel, crumbs, ...props}) => {
 
+    let newCrumbs = crumbs.filter((item) => {
+        return item.crumbLabel !== 'rekrutacja' && item.crumbLabel !== 'dla-sluchaczy' && item.crumbLabel !== 'o-nas'
+    })
 
     const datas = [
         {
@@ -100,8 +103,8 @@ const MainLayoult = ({children, location, crumbLabel, ...props}) => {
                 <div className={'headerContent'}>
                     <Link to={'/'}><h1>Medyczna Szkoła Policealna</h1></Link>
                     <div className={'headerContent-logos'}>
-                        <Link to={'https://www.slaskie.pl'} target="_blank"><img src={SlaskLogo} alt={'slask_logo'}/></Link>
-                        <Link to={'https://bip-slaskie.pl/mszsosn'} dtarget="_blank"><img id={'bip_logo'} src={BIPLogo} alt={'bip_logo'}/></Link>
+                        <a href={'https://www.slaskie.pl'} target="_blank"><img src={SlaskLogo} alt={'slask_logo'}/></a>
+                        <a href={'https://bip-slaskie.pl/mszsosn'} target="_blank"><img id={'bip_logo'} src={BIPLogo} alt={'bip_logo'}/></a>
 
                     </div>
                 </div>
@@ -111,7 +114,13 @@ const MainLayoult = ({children, location, crumbLabel, ...props}) => {
             <Navbar/>
             <section>
                 <div className={'section-content'}>
-                    <Breadcrumb location={location} crumbLabel={crumbLabel} />
+                    {/*<Breadcrumb location={location} crumbLabel={crumbLabel} />*/}
+                    <Breadcrumb
+                        crumbs={newCrumbs}
+                        crumbSeparator=" / "
+                        crumbLabel={crumbLabel}
+
+                    />
 
                     {children}
 

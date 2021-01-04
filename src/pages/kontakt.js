@@ -66,14 +66,33 @@ outline-color: #ff6200;
 `;
 
 
-const KontaktPage = ({data: {info}, location}) => {
+const KontaktPage = ({data: {info}, location, pageContext}) => {
+
+    const startAlertAnimation = () => {
+        const alertDiv = document.querySelector('.alert-sent');
+        if (alertDiv) {
+            alertDiv.classList.add('alert-sent--active');
+        }
+    };
+
+    const stopAlertAnimation = () => {
+        const alertDiv = document.querySelector('.alert-sent');
+        if (alertDiv) {
+            alertDiv.classList.remove('alert-sent--active');
+        }
+    };
+
+    const {
+        breadcrumb: { crumbs },
+    } = pageContext;
 
     let [displayAlert, setDisplayAlert] = useState(false);
     let [alertMessage, setAlertMessage] = useState('Wysłano wiadomość');
 
     return (
 
-        <MainLayoult location={location} crumbLabel={'Kontakt'}>
+        <MainLayoult location={location} crumbLabel={'Kontakt'} crumbs={crumbs}>
+            <div className={'alert-sent'}>Wiadomośc została wysłana</div>
             <div className={'silly-content-wrapper markdown-content'}>
 
                 <Formik
@@ -94,6 +113,7 @@ const KontaktPage = ({data: {info}, location}) => {
                                 setSubmitting(false)
 
                                 setAlertMessage('Wiadomość została wysłana!')
+                                startAlertAnimation();
                                 setDisplayAlert(true);
 
                                 resetForm();
@@ -108,6 +128,7 @@ const KontaktPage = ({data: {info}, location}) => {
                             })
 
                         setTimeout(()=>{
+                            stopAlertAnimation()
                             setDisplayAlert(false);
                         }, 5000)
 

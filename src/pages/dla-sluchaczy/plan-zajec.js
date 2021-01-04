@@ -7,16 +7,21 @@ import MainLayoult from "../../templates/main-layoult";
 
 
 
-const PlanZajecPage = ({data: {plany}, location}) => {
+const PlanZajecPage = ({data: {plany}, location, pageContext}) => {
+
+    const {
+        breadcrumb: { crumbs },
+    } = pageContext;
 
     return (
-        <MainLayoult location={location} crumbLabel={'Plan zajęć'}>
+        <MainLayoult location={location} crumbLabel={'Plan zajęć'} crumbs={crumbs}>
 
             <div className={'silly-content-wrapper dokumenty-do-pobrania-content-wrapper'}>
                 <h3>Plany zajęć:</h3>
                 <ul>
                     {plany.edges.map(({node}) => {
-                        return <li><Link to={node.planZajecWFormaciePdf.url}>{node.nazwaPlanu}</Link></li>
+                        console.log(node.nazwaPlanu)
+                        return <li key={node.nazwaPlanu}><a href={node.planZajecWFormaciePdf.url}>{node.nazwaPlanu}</a></li>
                     })}
                 </ul>
 

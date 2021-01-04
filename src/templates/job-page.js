@@ -4,9 +4,14 @@ import './job-page.css'
 import {graphql} from 'gatsby'
 import MainLayoult from "./main-layoult";
 
-const JobPage = ({pageContext: {slug}, data: {job}, location}) => {
+const JobPage = ({pageContext: {slug}, data: {job}, location, pageContext}) => {
+
+    const {
+        breadcrumb: { crumbs },
+    } = pageContext;
+
     return (
-        <MainLayoult location={location} crumbLabel={job.nazwaKierunku}>
+        <MainLayoult location={location} crumbLabel={job.nazwaKierunku} crumbs={crumbs}>
             <div className={'silly-content-wrapper markdown-content'}>
 
                 <div dangerouslySetInnerHTML={{__html: job.zawartoStrony}}/>

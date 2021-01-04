@@ -9,9 +9,14 @@ import {graphql} from 'gatsby'
 import MainLayoult from "../../templates/main-layoult";
 
 
-const GaleriaPage = ({data: {info}, location}) => {
+const GaleriaPage = ({data: {info}, location, pageContext}) => {
+
+    const {
+        breadcrumb: { crumbs },
+    } = pageContext;
+
     return (
-        <MainLayoult location={location} crumbLabel={"Galeria"}>
+        <MainLayoult location={location} crumbLabel={"Galeria"} crumbs={crumbs}>
             <div className={'silly-content-wrapper'}>
                     <h3>Galeria</h3>
                 {

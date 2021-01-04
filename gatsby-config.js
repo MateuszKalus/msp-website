@@ -16,17 +16,30 @@ module.exports = {
         {
             resolve: `gatsby-plugin-breadcrumb`,
             options: {
-                defaultCrumb: {
-                    // location: required and must include the pathname property
-                    location: {
-                        pathname: "/",
+                // useAutoGen: required 'true' to use autogen
+                useAutoGen: true,
+                // autoGenHomeLabel: optional 'Home' is default
+                autoGenHomeLabel: `Strona Główna`,
+                // exlude: optional, include this array to overwrite paths you don't want to
+                // generate breadcrumbs for.
+                exclude: [
+                    `/rekrutacja/`,
+                    `/404/`,
+                    `/404.html`,
+                    `/offline-plugin-app-shell-fallback/`,
+                ],
+                // crumbLabelUpdates: optional, update specific crumbLabels in the path
+                crumbLabelUpdates: [
+                    {
+                        pathname: '/aktualnosci',
+                        crumbLabel: 'Aktualności'
                     },
-                    // crumbLabel: required label for the default crumb
-                    crumbLabel: "Strona Główna",
-                    // all other properties optional
-                    crumbSeparator: "   /   ",
-                },
-            },
+                    {
+                        pathname: '/rekrutacja/kierunki-ksztalcenia',
+                        crumbLabel: 'Kierunki kształcenia'
+                    }
+                ]
+            }
         },
         {
             resolve: "gatsby-source-datocms",

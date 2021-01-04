@@ -5,18 +5,26 @@ import './aktualnosci.css'
 
 import {graphql} from "gatsby";
 
-const NewsPage = ({data, location}) => {
+const NewsPage = ({data, location, pageContext}) => {
     const articles = data.allDatoCmsNews.edges;
 
+    const {
+        breadcrumb: { crumbs },
+    } = pageContext;
+
+    console.log(crumbs);
 
     return (
 
-        <MainLayoult location={location} crumbLabel="Aktualności">
+        <MainLayoult location={location} crumbLabel="Aktualności" crumbs={crumbs}>
+
+
 
             <div className={'aktualnosci-wrapper'}>
 
                 <div className={'news-headline'}>
                     <span className={'news-title'}>AKTUALNOŚCI</span>
+
                 </div>
 
                 <div className={'aktualnosci-content-wrapper'}>
@@ -45,7 +53,7 @@ const NewsPage = ({data, location}) => {
                                     </div>
                                     <div className={'single-article-gallery'}>
                                         {images.map(({src}) => {
-                                            return <img src={src} alt={src}/>
+                                            return <img src={src} alt={src} key={src}/>
                                         })}
 
                                     </div>

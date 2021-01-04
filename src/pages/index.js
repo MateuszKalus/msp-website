@@ -10,13 +10,19 @@ import ImportantMessage from "../components/ImportantMessage/ImportantMessage";
 
 import {graphql} from "gatsby";
 
-const IndexPage = ({location, data}) => {
+const IndexPage = ({location, data, pageContext}) => {
+
+    const {
+        breadcrumb: { crumbs },
+    } = pageContext;
+
+
     const jobs = data.allDatoCmsKierunki.edges.map(({node}) => {
         return {title: node.nazwaKierunku, adr: 'rekrutacja/kierunki-ksztalcenia/'+node.jobSlug}
     })
 
     return (
-        <MainLayoult mainPage={true} location={location} crumbLabel="Strona Główna">
+        <MainLayoult mainPage={true} location={location} crumbLabel="Strona Główna" crumbs={crumbs}>
             <JoinUs jobs={jobs} w1={data.datoCmsHasloNaBannerze.pierwszyWiersz} w2={data.datoCmsHasloNaBannerze.drugiWiersz}/>
             <News />
             <MovieSector />
