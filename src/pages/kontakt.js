@@ -112,14 +112,14 @@ const StyledRadioLabel = styled.label`
        
        
        }
-    }
+    
        
-`
+`;
 
 const Alert = styled.div`
     display: ${({displayAlert}) => displayAlert ? 'inline-block' : 'none'};
     margin-left: 10px;
-`
+`;
 
 const Button = styled.button`
 outline-color: #ff6200;
@@ -152,11 +152,14 @@ const StyledDivForCustomRadio = styled.div`
         -moz-box-shadow:    0px 0px 4px 0px rgba(50, 50, 50, 0.75);
         box-shadow:         0px 0px 4px 0px rgba(50, 50, 50, 0.75);
     }
-`
+`;
 
 
-const KontaktPage = ({data: {info}, location, pageContext}) => {
 
+const KontaktPage = ({data: {info}, data, location, pageContext}) => {
+
+
+    console.log(data.nazwa.edges[0].node.duzyGornyTekst);
     const startAlertAnimation = () => {
         const alertDiv = document.querySelector('.alert-sent');
         if (alertDiv) {
@@ -172,7 +175,7 @@ const KontaktPage = ({data: {info}, location, pageContext}) => {
     };
 
     const {
-        breadcrumb: { crumbs },
+        breadcrumb: {crumbs},
     } = pageContext;
 
     let [displayAlert, setDisplayAlert] = useState(false);
@@ -198,10 +201,10 @@ const KontaktPage = ({data: {info}, location, pageContext}) => {
                             headers: headers
                         })
                             .then((response) => {
-                                console.log(response)
-                                setSubmitting(false)
+                                console.log(response);
+                                setSubmitting(false);
 
-                                setAlertMessage('Wiadomość została wysłana!')
+                                setAlertMessage('Wiadomość została wysłana!');
                                 startAlertAnimation();
                                 setDisplayAlert(true);
 
@@ -209,15 +212,15 @@ const KontaktPage = ({data: {info}, location, pageContext}) => {
 
                             })
                             .catch((error) => {
-                                console.log(error)
-                                setSubmitting(false)
+                                console.log(error);
+                                setSubmitting(false);
 
-                                setAlertMessage('Wystąpił nieoczekiwany błąd.')
+                                setAlertMessage('Wystąpił nieoczekiwany błąd.');
                                 setDisplayAlert(true);
-                            })
+                            });
 
-                        setTimeout(()=>{
-                            stopAlertAnimation()
+                        setTimeout(() => {
+                            stopAlertAnimation();
                             setDisplayAlert(false);
                         }, 5000)
 
@@ -270,24 +273,24 @@ const KontaktPage = ({data: {info}, location, pageContext}) => {
 
                             <StyledDivForCustomRadio>
                                 <StyledRadio
-                                             type={'radio'}
-                                             name={'contactway'}
-                                             id={'contactway--phone'}
-                                             onChange={handleChange}
-                                             onBlur={handleBlur}
-                                             value={'telefoniczna'}
+                                    type={'radio'}
+                                    name={'contactway'}
+                                    id={'contactway--phone'}
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={'telefoniczna'}
                                 />
                                 <StyledRadioLabel htmlFor="contactway--phone">telefoniczna</StyledRadioLabel>
                             </StyledDivForCustomRadio>
 
                             <StyledDivForCustomRadio>
                                 <StyledRadio
-                                             type={'radio'}
-                                             name={'contactway'}
-                                             id={'contactway--email'}
-                                             onChange={handleChange}
-                                             onBlur={handleBlur}
-                                             value={'e-mailowa'}
+                                    type={'radio'}
+                                    name={'contactway'}
+                                    id={'contactway--email'}
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    value={'e-mailowa'}
                                 />
                                 <StyledRadioLabel htmlFor="contactway--email">e-mailowa</StyledRadioLabel>
                             </StyledDivForCustomRadio>
@@ -302,7 +305,8 @@ const KontaktPage = ({data: {info}, location, pageContext}) => {
                                 <option value="" selected disabled hidden>-- wybierz kierunek --</option>
                                 <option value="Pytanie ogólne">Pytanie ogólne</option>
                                 {info.edges.map(({node}) => {
-                                    return <option value={node.nazwaKierunku} key={node.nazwaKierunku}>{node.nazwaKierunku}</option>
+                                    return <option value={node.nazwaKierunku}
+                                                   key={node.nazwaKierunku}>{node.nazwaKierunku}</option>
                                 })}
 
                             </StyledSelect>
@@ -332,16 +336,24 @@ const KontaktPage = ({data: {info}, location, pageContext}) => {
 };
 
 export const query = graphql`
-query FetchJobsToShow {
-    info: allDatoCmsKierunki(sort: {order: ASC, fields: nazwaKierunku}) {
-        edges {
-            node {
-                nazwaKierunku
+    query FetchJobsToShow {
+        info: allDatoCmsKierunki(sort: {order: ASC, fields: nazwaKierunku}) {
+            edges {
+                node {
+                    nazwaKierunku
+                }
+            }
+        },
+        nazwa: allDatoCmsNazwaSzkolyWNaglowku {
+            edges {
+                node {
+                    duzyGornyTekst
+                    malyDolnyTekst
+                }
             }
         }
-    }  
-}
-`
+    }
+`;
 
 
 export default KontaktPage;

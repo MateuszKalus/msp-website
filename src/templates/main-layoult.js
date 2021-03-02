@@ -6,7 +6,7 @@ import SlaskLogo from '../images/logo-slaskie-czarne@2x.png'
 import BIPLogo from '../images/bip_logo.png'
 
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
-import {Link} from "gatsby";
+import {graphql, StaticQuery, Link} from "gatsby";
 
 
 
@@ -97,53 +97,81 @@ const MainLayoult = ({children, location, crumbLabel, crumbs, ...props}) => {
 
 
 
+
+
     return (
-        <main>
-            <header>
-                <div className={'headerContent'}>
-                    <Link to={'/'}><h1>Medyczna Szkoła Policealna</h1></Link>
-                    <div className={'headerContent-logos'}>
-                        <a href={'https://www.slaskie.pl'} target="_blank"><img src={SlaskLogo} alt={'slask_logo'}/></a>
-                        <a href={'https://bip-slaskie.pl/mszsosn'} target="_blank"><img id={'bip_logo'} src={BIPLogo} alt={'bip_logo'}/></a>
+        <StaticQuery
+            query={graphql`
+      {
+        nazwa: allDatoCmsNazwaSzkolyWNaglowku {
+          edges {
+            node {
+              duzyGornyTekst
+              malyDolnyTekst
+            }
+          }
+        }
+      }
+    `}
+            render={data => (
+                <main>
+                    <header>
+                        <div className={'headerContent'}>
+                            <div>
+                                <Link to={'/'}><h1>{data.nazwa.edges[0].node.duzyGornyTekst}</h1></Link>
+                                <Link to={'/'}><h4>{data.nazwa.edges[0].node.malyDolnyTekst}</h4></Link>
 
-                    </div>
-                </div>
+                            </div>
 
-            </header>
+                            <div className={'headerContent-logos'}>
+                                <a href={'https://www.slaskie.pl'} target="_blank"><img src={SlaskLogo} alt={'slask_logo'}/></a>
+                                <a href={'https://bip-slaskie.pl/mszsosn'} target="_blank"><img id={'bip_logo'} src={BIPLogo} alt={'bip_logo'}/></a>
 
-            <Navbar/>
-            <section>
-                <div className={'section-content'}>
-                    {/*<Breadcrumb location={location} crumbLabel={crumbLabel} />*/}
-                    <Breadcrumb
-                        crumbs={newCrumbs}
-                        crumbSeparator=" / "
-                        crumbLabel={crumbLabel}
+                            </div>
+                        </div>
 
-                    />
+                    </header>
 
-                    {children}
+                    <Navbar/>
+                    <section>
+                        <div className={'section-content'}>
+                            {/*<Breadcrumb location={location} crumbLabel={crumbLabel} />*/}
+                            <Breadcrumb
+                                crumbs={newCrumbs}
+                                crumbSeparator=" / "
+                                crumbLabel={crumbLabel}
 
-                </div>
+                            />
 
-            </section>
+                            {children}
 
-            <footer>
-                <div className={'top-footer-section'}>
-                    <span className={'top-footer-section-label'}>SKONTAKTUJ SIĘ Z NAMI:</span>
-                    <ContactBar datas={datas[0]}/>
-                    <ContactBar datas={datas[1]}/>
-                </div>
-                <div className={'bottom-footer-section'}>
-                    <div className={'bottom-footer-section-label'}>
-                        <span>Polityka prywatności i cookies</span>
-                        <span>© Created by MDK</span>
-                    </div>
+                        </div>
 
-                </div>
-            </footer>
-        </main>
+                    </section>
+
+                    <footer>
+                        <div className={'top-footer-section'}>
+                            <span className={'top-footer-section-label'}>SKONTAKTUJ SIĘ Z NAMI:</span>
+                            <ContactBar datas={datas[0]}/>
+                            <ContactBar datas={datas[1]}/>
+                        </div>
+                        <div className={'bottom-footer-section'}>
+                            <div className={'bottom-footer-section-label'}>
+                                <span>Polityka prywatności i cookies</span>
+                                <span>© Created by MDK</span>
+                            </div>
+
+                        </div>
+                    </footer>
+                </main>
+            )}
+        >
+
+        </StaticQuery>
+
+
     )
-}
+};
+
 
 export default MainLayoult;

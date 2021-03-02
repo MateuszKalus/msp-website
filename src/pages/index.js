@@ -7,6 +7,8 @@ import JoinUs from "../components/JoinUs/JoinUs";
 import MovieSector from "../components/MovieSector/MovieSector";
 import ImportantMessage from "../components/ImportantMessage/ImportantMessage";
 
+import Adventages from "../components/Adventages/Adventages";
+
 
 import {graphql} from "gatsby";
 
@@ -25,6 +27,7 @@ const IndexPage = ({location, data, pageContext}) => {
         <MainLayoult mainPage={true} location={location} crumbLabel="Strona Główna" crumbs={crumbs}>
             <JoinUs jobs={jobs} w1={data.datoCmsHasloNaBannerze.pierwszyWiersz} w2={data.datoCmsHasloNaBannerze.drugiWiersz}/>
             <News />
+            <Adventages data={data.adventages}/>
             <MovieSector />
             <ImportantMessage />
         </MainLayoult>
@@ -46,9 +49,20 @@ query FetchJobs {
         pierwszyWiersz
         drugiWiersz
     }
-  
+    adventages: allDatoCmsAdventage(sort: {fields: kolejnoscNieZmienia, order: ASC}) {
+        edges {
+            node {
+                naglowek
+                opis
+                podpis
+                ikona {
+                    url
+                }
+            }
+        }
+    }
 }
-`
+`;
 
 
 
