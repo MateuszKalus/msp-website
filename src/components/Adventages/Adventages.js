@@ -20,7 +20,7 @@ const Adventages = ({data}) => {
     return (
         <div className={'adventage-wrapper'}>
             <div className={'adventage-header'}>
-                PIĄTKA MEDYKA
+                <p className={'adventage-header-main'}>PIĄTKA MEDYKA</p>
                 <span>czyli dlaczego warto być z nami...</span>
             </div>
 

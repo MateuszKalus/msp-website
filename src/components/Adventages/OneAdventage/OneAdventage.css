@@ -1,5 +1,5 @@
 .one-adventage-wrapper {
-    width: 15%;
+    width: 20%;
     min-width: 150px;
 
     /*margin: 5px;*/
@@ -10,10 +10,18 @@
 
 }
 
+@media (max-width: 600px) {
+
+    .one-adventage-wrapper {
+        background-color: rgba(200, 200, 200, 0.3);
+        margin: 10px 10px;
+    }
+}
+
 .oaw-first-page {
     height: 25vh;
     display: grid;
-    grid-template-rows: 15vh 5vh auto;
+    grid-template-rows: 11vh 5vh auto;
     text-align: center;
 
     font-weight: bold;
@@ -27,6 +35,12 @@
 
 }
 
+.oaw-second-page span {
+    text-align: center;
+    font-weight: bold;
+
+}
+
 .oaw-first-page img {
     margin: auto;
     height: 100%;
@@ -37,6 +51,9 @@
 }
 
 .oaw-second-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     display: none;
     height: 25vh;
 }
@@ -50,11 +67,17 @@
 }
 
 .one-adventage-wrapper:hover .oaw-second-page{
-    display: block;
+    display: flex;
     background-color: #ff6200;
     color: aliceblue;
 }
 
 .one-adventage-wrapper:hover .oaw-first-page{
     display: none;
+}
+
+* {
+    /*background-color: black!important;*/
+    /*color: yellow!important;*/
+    /*font-size: x-large!important;*/
 }

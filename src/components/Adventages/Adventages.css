@@ -18,12 +18,31 @@
     background-color: #ff6200;
     font-weight: bold;
     color: aliceblue;
-    font-size: 2vw;
+    font-size: 2.5vw;
+}
+
+.adventage-header-main {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: aliceblue;
+    color: #ff6200;
 }
 
 .adventage-header span {
     margin-left: 40px;
-    font-size: 1vw;
+    font-size: 1.5vw;
+    font-style: italic;
+}
+
+@media (max-width: 600px) {
+
+    .adventage-header {
+        font-size: 30px;
+    }
+
+    .adventage-header span {
+        font-size: 15px;
+    }
 }
 
 .adventages-content {
