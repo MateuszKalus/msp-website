@@ -208,12 +208,22 @@ main > nav {
     color: white;
 }
 
+.dropdown-content a:focus {
+    background-color: rgba(252,161,105,1);
+    color: white;
+}
+
 .dropdown-content-low a:hover {
     background-color: rgba(252,161,105,1);
     color: white;
 }
 
 .dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+}
+
+.dropdown:focus .dropdown-content {
     display: block;
     opacity: 1;
 }
@@ -225,6 +235,11 @@ main > nav {
 
 
 .dropdown:hover .dropbtn {
+    background-color: #ffffff;
+    color: black;
+}
+
+.dropdown:focus .dropbtn {
     background-color: #ffffff;
     color: black;
 }

@@ -24,6 +24,10 @@ const Navbar = (props) => {
             }
 
         }
+
+        window.onkeypress = function () {
+            console.log('asd')
+        };
     }
 
     return (
@@ -48,7 +52,7 @@ const Navbar = (props) => {
                             </li>
 
                             <li className="dropdown">
-                                <div className="dropbtn">
+                                <div className="dropbtn" tabIndex="0">
                                     <span>REKRUTACJA</span>
                                     <div className={'arrow'}></div>
                                 </div>
@@ -122,12 +126,12 @@ const Navbar = (props) => {
                         </div>
                     </li>
 
-                    <li className="dropdown">
+                    <li className="dropdown" tabIndex="0">
                         <div className="dropbtn">
                             <span>REKRUTACJA</span>
                             <div className={'arrow'}></div>
                         </div>
-                        <div className="dropdown-content">
+                        <div className="dropdown-content"  tabIndex="0">
                             <Link to={'/rekrutacja/wazne-informacje'}>Ważne informacje</Link>
                             <Link to={'/rekrutacja/kierunki-ksztalcenia'}>Kierunki kształcenia</Link>
                             <Link to={'/rekrutacja/dokumenty-do-pobrania'}>Dokumenty do pobrania</Link>

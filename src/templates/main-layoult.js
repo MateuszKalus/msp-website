@@ -1,15 +1,12 @@
-import React, {useEffect} from "react"
+import React, {useEffect, useState} from "react"
 import "./main-layoult.css"
 import Navbar from '../components/Navbar/Navbar'
 import ContactBar from '../components/Footer/ContactBar/ContactBar'
 import SlaskLogo from '../images/logo-slaskie-czarne@2x.png'
 import BIPLogo from '../images/bip_logo.png'
 
-import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
+import {Breadcrumb} from 'gatsby-plugin-breadcrumb'
 import {graphql, StaticQuery, Link} from "gatsby";
-
-
-
 
 
 const MainLayoult = ({children, location, crumbLabel, crumbs, ...props}) => {
@@ -85,18 +82,53 @@ const MainLayoult = ({children, location, crumbLabel, crumbs, ...props}) => {
         }
     ];
 
-    useEffect(()=>{
+
+    useEffect(() => {
         const breadcrumb = document.querySelector('.breadcrumb');
 
-        if (location.pathname==='/') {
+        if (location.pathname === '/') {
             breadcrumb.classList.remove('show');
         } else {
             breadcrumb.classList.add('show')
         }
-    })
+
+        handleContrast();
+        console.log('gw');
+    });
+
+    const changeContrastInLocalStorage = async () => {
+        if (localStorage.getItem('contrast') === 'true') {
+            localStorage.setItem("contrast", "false");
+
+        } else {
+            localStorage.setItem("contrast", "true");
+
+        }
+
+        await window.location.reload(false);
+    }
+
+    const handleContrast = () => {
+
+        const elements = document.querySelectorAll('*');
+        const forBorderChange = document.querySelectorAll('input');
+
+        if (localStorage.getItem('contrast') === 'true') {
+            elements.forEach((element) => {
+                element.style.backgroundColor = 'black';
+                element.style.color = 'yellow';
+            })
 
 
+            forBorderChange.forEach((element) => {
+                    element.style.border = '2px solid yellow';
+                }
 
+
+            )
+        }
+
+    }
 
 
     return (
@@ -120,12 +152,16 @@ const MainLayoult = ({children, location, crumbLabel, crumbs, ...props}) => {
                             <div>
                                 <Link to={'/'}><h1>{data.nazwa.edges[0].node.duzyGornyTekst}</h1></Link>
                                 <Link to={'/'}><h4>{data.nazwa.edges[0].node.malyDolnyTekst}</h4></Link>
+                                <button onClick={changeContrastInLocalStorage}>KONTRAST</button>
 
                             </div>
 
                             <div className={'headerContent-logos'}>
-                                <a href={'https://www.slaskie.pl'} target="_blank"><img src={SlaskLogo} alt={'slask_logo'}/></a>
-                                <a href={'https://bip-slaskie.pl/mszsosn'} target="_blank"><img id={'bip_logo'} src={BIPLogo} alt={'bip_logo'}/></a>
+                                <a href={'https://www.slaskie.pl'} target="_blank"><img src={SlaskLogo}
+                                                                                        alt={'slask_logo'}/></a>
+                                <a href={'https://bip-slaskie.pl/mszsosn'} target="_blank"><img id={'bip_logo'}
+                                                                                                src={BIPLogo}
+                                                                                                alt={'bip_logo'}/></a>
 
                             </div>
                         </div>
