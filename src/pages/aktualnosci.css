@@ -129,6 +129,12 @@
     margin-left: 40px;
 }
 
+@media (max-width: 1024px) {
+    .markdown-content li {
+        margin-left: 5px;
+    }
+}
+
 .markdown-content a {
     color: black
 }

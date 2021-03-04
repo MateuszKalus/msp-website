@@ -31,7 +31,8 @@
 
 .adventage-header span {
     font-size: 1.5vw;
-    font-style: italic;
+    /*font-style: italic;*/
+    font-weight: normal;
 
 }
 
