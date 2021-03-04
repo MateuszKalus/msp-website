@@ -8,15 +8,8 @@ import {Formik} from "formik";
 
 
 import styled from 'styled-components'
+import "../templates/job-page.css"
 
-
-if (localStorage.getItem('contrast')==='true') {
-    require('../templates/job-page.css');
-    require('../templates/contrast.css');
-} else {
-    require('../templates/job-page.css');
-
-}
 
 const StyledLabel = styled.label`
 outline-color: #ff6200;
