@@ -21,7 +21,7 @@ const Adventages = ({data}) => {
         <div className={'adventage-wrapper'}>
             <div className={'adventage-header'}>
                 <p className={'adventage-header-main'}>PIĄTKA MEDYKA</p>
-                <span>czyli dlaczego warto być z nami...</span>
+                <span>Najedź na ikony i przekonaj się, dlaczego warto być z nami:</span>
             </div>
 
             <div className={'adventages-content'}>

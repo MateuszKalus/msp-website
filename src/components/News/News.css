@@ -111,7 +111,19 @@
 
     .news-headline {
         font-size: 3vw;
-        height: auto;
+        height: 5vh;
         padding: 5px 5px;
+    }
+
+    .news-headline > .news-hyperlink {
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .news-headline > .news-hyperlink::before {
+        height: inherit;
+        transform: translateY(5px);
     }
 }

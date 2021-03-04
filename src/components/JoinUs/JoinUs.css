@@ -158,11 +158,8 @@
     }
 
     .joinus-slicer {
-
         font-size: 4vw;
-        bottom: 8vw;
-        left: 2vw;
-        height: 6vw;
-        max-width: fit-content;
+        bottom: 30px;
+        max-width: 100vw;
     }
 }
