@@ -12,11 +12,6 @@ const Navbar = (props) => {
 
     if (typeof window !== `undefined`) {
 
-        if (localStorage.getItem('contrast')==='true') {
-            require('./Navbar-contrast.css');
-            console.log('DM');
-        }
-
         window.onscroll = function () {
             scrollFunction()
         };

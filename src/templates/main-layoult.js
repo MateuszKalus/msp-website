@@ -123,25 +123,13 @@ const MainLayoult = ({children, location, crumbLabel, crumbs, ...props}) => {
 
     const handleContrast = () => {
 
-        const elements = document.querySelectorAll('*');
-        const forBorderChange = document.querySelectorAll('input');
-
         if (localStorage.getItem('contrast') === 'true') {
-            // elements.forEach((element) => {
-            //     element.style.backgroundColor = 'black';
-            //     element.style.color = 'yellow';
-            // })
+            const html = document.querySelector('html');
+            html.classList.add('dark-theme');
 
-
-            forBorderChange.forEach((element) => {
-                    element.style.border = '2px solid yellow';
-                }
-
-
-            )
         }
 
-    }
+    };
 
 
     return (
