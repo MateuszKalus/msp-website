@@ -1,5 +1,5 @@
 import React from "react";
-// import "./Navbar.css";
+import "./Navbar.css";
 import Logo from '../../images/logo_rcku.png';
 import { Link } from "gatsby";
 
@@ -12,10 +12,7 @@ const Navbar = (props) => {
 
     if (typeof window !== `undefined`) {
 
-        if (localStorage.getItem('contrast')==='false') {
-            require('./Navbar.css');
-            console.log('LM');
-        } else {
+        if (localStorage.getItem('contrast')==='true') {
             require('./Navbar-contrast.css');
             console.log('DM');
         }
