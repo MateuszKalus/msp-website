@@ -12,12 +12,12 @@ const Navbar = (props) => {
 
     if (typeof window !== `undefined`) {
 
-        if (localStorage.getItem('contrast')==='true') {
-            require('./Navbar-contrast.css');
-            console.log('DARKMODE');
-        } else {
+        if (localStorage.getItem('contrast')==='false') {
             require('./Navbar.css');
-            console.log('LIGHTMODE');
+            console.log('LM');
+        } else {
+            require('./Navbar-contrast.css');
+            console.log('DM');
         }
 
         window.onscroll = function () {
