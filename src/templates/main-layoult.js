@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react"
-// import "./main-layoult.css"
+import "./main-layoult.css"
 import Navbar from '../components/Navbar/Navbar'
 import ContactBar from '../components/Footer/ContactBar/ContactBar'
 import SlaskLogo from '../images/logo-slaskie-czarne@2x.png'
