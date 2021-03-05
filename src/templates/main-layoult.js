@@ -6,16 +6,20 @@ import SlaskLogo from '../images/logo-slaskie-czarne@2x.png'
 import BIPLogo from '../images/bip_logo.png'
 
 import {Breadcrumb} from 'gatsby-plugin-breadcrumb'
-import {graphql, StaticQuery, Link} from "gatsby";
+import {graphql, StaticQuery, Link, navigate} from "gatsby";
 
 
 const MainLayoult = ({children, location, crumbLabel, crumbs, ...props}) => {
 
-    if (localStorage.getItem('contrast')==='true') {
-        require('./main-layoult-contrast.css')
-    } else {
-        require('./main-layoult.css')
+    if (typeof window !== `undefined`) {
+        if (localStorage.getItem('contrast')==='true') {
+            require('./main-layoult-contrast.css')
+        } else {
+            require('./main-layoult.css')
+        }
     }
+
+
 
     let newCrumbs = crumbs.filter((item) => {
         return item.crumbLabel !== 'rekrutacja' && item.crumbLabel !== 'dla-sluchaczy' && item.crumbLabel !== 'o-nas'

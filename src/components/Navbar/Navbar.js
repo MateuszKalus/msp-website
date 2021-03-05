@@ -8,13 +8,16 @@ import HamburgerIconBlack from "../../images/menu-24px_black.svg"
 
 const Navbar = (props) => {
 
-    if (localStorage.getItem('contrast')==='true') {
-        require('./Navbar-contrast.css')
-    } else {
-        require('./Navbar.css')
-    }
+
 
     if (typeof window !== `undefined`) {
+
+        if (localStorage.getItem('contrast')==='true') {
+            require('./Navbar-contrast.css')
+        } else {
+            require('./Navbar.css')
+        }
+
         window.onscroll = function () {
             scrollFunction()
         };
