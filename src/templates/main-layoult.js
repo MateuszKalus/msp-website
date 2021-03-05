@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react"
-import "./main-layoult.css"
+// import "./main-layoult.css"
 import Navbar from '../components/Navbar/Navbar'
 import ContactBar from '../components/Footer/ContactBar/ContactBar'
 import SlaskLogo from '../images/logo-slaskie-czarne@2x.png'
@@ -10,6 +10,12 @@ import {graphql, StaticQuery, Link} from "gatsby";
 
 
 const MainLayoult = ({children, location, crumbLabel, crumbs, ...props}) => {
+
+    if (localStorage.getItem('contrast')==='true') {
+        require('./main-layoult-contrast.css')
+    } else {
+        require('./main-layoult.css')
+    }
 
     let newCrumbs = crumbs.filter((item) => {
         return item.crumbLabel !== 'rekrutacja' && item.crumbLabel !== 'dla-sluchaczy' && item.crumbLabel !== 'o-nas'

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Navbar.css";
+// import "./Navbar.css";
 import Logo from '../../images/logo_rcku.png';
 import { Link } from "gatsby";
 
@@ -7,6 +7,12 @@ import HamburgerIcon from "../../images/menu-24px.svg"
 import HamburgerIconBlack from "../../images/menu-24px_black.svg"
 
 const Navbar = (props) => {
+
+    if (localStorage.getItem('contrast')==='true') {
+        require('./Navbar-contrast.css')
+    } else {
+        require('./Navbar.css')
+    }
 
     if (typeof window !== `undefined`) {
         window.onscroll = function () {
@@ -24,10 +30,6 @@ const Navbar = (props) => {
             }
 
         }
-
-        window.onkeypress = function () {
-            console.log('asd')
-        };
     }
 
     return (
