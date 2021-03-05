@@ -11,13 +11,7 @@ import {graphql, StaticQuery, Link, navigate} from "gatsby";
 
 const MainLayoult = ({children, location, crumbLabel, crumbs, ...props}) => {
 
-    if (typeof window !== `undefined`) {
-        if (localStorage.getItem('contrast')==='true') {
-            require('./main-layoult-contrast.css')
-        } else {
-            require('./main-layoult.css')
-        }
-    }
+
 
 
 
@@ -94,6 +88,15 @@ const MainLayoult = ({children, location, crumbLabel, crumbs, ...props}) => {
 
 
     useEffect(() => {
+
+        if (typeof window !== `undefined`) {
+            if (localStorage.getItem('contrast')==='true') {
+                require('./main-layoult-contrast.css')
+            } else {
+                require('./main-layoult.css')
+            }
+        }
+
         const breadcrumb = document.querySelector('.breadcrumb');
 
         if (location.pathname === '/') {
