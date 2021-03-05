@@ -124,10 +124,10 @@ const MainLayoult = ({children, location, crumbLabel, crumbs, ...props}) => {
         const forBorderChange = document.querySelectorAll('input');
 
         if (localStorage.getItem('contrast') === 'true') {
-            elements.forEach((element) => {
-                element.style.backgroundColor = 'black';
-                element.style.color = 'yellow';
-            })
+            // elements.forEach((element) => {
+            //     element.style.backgroundColor = 'black';
+            //     element.style.color = 'yellow';
+            // })
 
 
             forBorderChange.forEach((element) => {
