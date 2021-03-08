@@ -2,20 +2,20 @@ import React from "react"
 
 import "./ImportantMessage.css"
 
-const ImportantMessage = (props) => {
+const ImportantMessage = ({data}) => {
 
     return (
         <div className={'important-wrapper'}>
-            <h3>KOMUNIKAT DYREKTORA RCKU</h3>
+            <h3>{data.nagWek}</h3>
 
 
             <p className={'important-info'}>
-                W REGIONALNYM CENTRUM KSZTAŁCENIA USTAWICZNEGO
-                W SOSNOWCU I W ZAWIERCIU<br/>
-                od 30 listopada 2020r. do 03 stycznia 2021r.<br/>
-                OGRANICZA SIĘ FUNKCJONOWANIE PLACÓWKI.
+                <div dangerouslySetInnerHTML={{__html: data.trescKomunikatu}}/>
             </p>
-            <p className={'important-message-sign'}>Renata Dusza<br/>Dyrektor</p>
+            <p className={'important-message-sign'}>
+                <div dangerouslySetInnerHTML={{__html: data.podpis}}/>
+            </p>
+
         </div>
 
     )

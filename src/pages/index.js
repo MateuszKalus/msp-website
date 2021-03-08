@@ -29,7 +29,7 @@ const IndexPage = ({location, data, pageContext}) => {
             <News />
             <Adventages data={data.adventages}/>
             <MovieSector />
-            <ImportantMessage />
+            <ImportantMessage data={data.komunikat}/>
         </MainLayoult>
 
     )
@@ -60,6 +60,11 @@ query FetchJobs {
                 }
             }
         }
+    }
+    komunikat: datoCmsKomunikatDyrektora {
+        nagWek
+        trescKomunikatu
+        podpis
     }
 }
 `;
