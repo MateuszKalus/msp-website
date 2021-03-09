@@ -18,9 +18,8 @@ const ImportantMessage = ({data}) => {
             </div>
 
         </div>
-
     )
-}
+};
 
 
 export default ImportantMessage;

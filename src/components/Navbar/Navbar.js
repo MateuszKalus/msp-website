@@ -91,6 +91,7 @@ const Navbar = (props) => {
                                 <div className="dropdown-content">
                                     <Link to={'/o-nas/o-placowce'}>O placówce</Link>
                                     <Link to={'/o-nas/galeria'}>Galeria</Link>
+                                    <Link to={'/o-nas/partnerzy'}>Partnerzy</Link>
                                     {/*<Link to={'/o-nas/rodo'}>RODO</Link>*/}
                                 </div>
                             </li>
@@ -166,6 +167,7 @@ const Navbar = (props) => {
                         <div className="dropdown-content">
                             <Link to={'/o-nas/o-placowce'}>O placówce</Link>
                             <Link to={'/o-nas/galeria'}>Galeria</Link>
+                            <Link to={'/o-nas/partnerzy'}>Partnerzy</Link>
                             {/*<Link to={'/o-nas/rodo'}>RODO</Link>*/}
                         </div>
                     </li>

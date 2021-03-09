@@ -1,4 +1,10 @@
 
+.partner-wrapper {
+    justify-content: center;
+}
+.partner-wrapper img{
+    width: 130px;
+}
 
 .single-job {
     position: relative;
