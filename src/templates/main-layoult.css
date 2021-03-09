@@ -41,6 +41,7 @@
 
 .dark-theme #contrast-icon {
     background-color: yellow!important;
+    border-left: 2px solid yellow;
 }
 
 .dark-theme #contrast-component {
