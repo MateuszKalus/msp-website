@@ -12,9 +12,9 @@ const ImportantMessage = ({data}) => {
             <p className={'important-info'}>
                 <div dangerouslySetInnerHTML={{__html: data.trescKomunikatu}}/>
             </p>
-            <p className={'important-message-sign'}>
-                <div dangerouslySetInnerHTML={{__html: data.podpis}}/>
-            </p>
+
+            <div className={'important-message-sign'} dangerouslySetInnerHTML={{__html: data.podpis}}/>
+
 
         </div>
 
