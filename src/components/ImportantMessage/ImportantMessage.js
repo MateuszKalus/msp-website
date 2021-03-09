@@ -9,11 +9,13 @@ const ImportantMessage = ({data}) => {
             <h3>{data.nagWek}</h3>
 
 
-            <p className={'important-info'}>
+            <div className={'important-info'}>
                 <div dangerouslySetInnerHTML={{__html: data.trescKomunikatu}}/>
-            </p>
+            </div>
 
-            <div className={'important-message-sign'} dangerouslySetInnerHTML={{__html: data.podpis}}></div>
+            <div className={'important-message-sign'}>
+                <div dangerouslySetInnerHTML={{__html: data.podpis}}/>
+            </div>
 
         </div>
 
