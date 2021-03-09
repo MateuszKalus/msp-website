@@ -15,7 +15,6 @@ const ImportantMessage = ({data}) => {
 
             <div className={'important-message-sign'} dangerouslySetInnerHTML={{__html: data.podpis}}/>
 
-
         </div>
 
     )
