@@ -13,7 +13,7 @@ const ImportantMessage = ({data}) => {
                 <div dangerouslySetInnerHTML={{__html: data.trescKomunikatu}}/>
             </p>
 
-            <div className={'important-message-sign'} dangerouslySetInnerHTML={{__html: data.podpis}}/>
+            <div className={'important-message-sign'} dangerouslySetInnerHTML={{__html: data.podpis}}></div>
 
         </div>
 
