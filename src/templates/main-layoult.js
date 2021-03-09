@@ -84,6 +84,7 @@ const MainLayoult = ({children, location, crumbLabel, crumbs, ...props}) => {
           }
           telefony {
             telefony
+            telefonClick
           }
         }
       }

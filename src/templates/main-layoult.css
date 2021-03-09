@@ -9,7 +9,7 @@
     box-sizing: border-box;
 
     font-family: 'Open Sans', sans-serif;
-
+    line-height: 1.5;
 }
 
 .header-logos {
@@ -188,6 +188,7 @@ header {
 }
 
 .headerContent {
+
     color: white;
     width: 75%;
     padding: 20px;
@@ -203,6 +204,10 @@ header {
     width: 80%;
 }
 
+.headerContent * {
+    line-height: 1.2;
+
+}
 
 .headerContent a {
     color: white;
