@@ -102,19 +102,24 @@ const MainLayoult = ({children, location, crumbLabel, crumbs, ...props}) => {
                                 <div id={'contrast-component'} onClick={changeContrastInLocalStorage}>
                                     <label htmlFor={'contrast-icon'}>WCAG:</label>
                                     <input id='contrast-icon' type="image" src={ContrastIcon}
-                                           />
+                                    />
                                 </div>
 
                             </div>
 
-                            <div className={'headerContent-logos'}>
+                            <div className={'header-logos'}>
+
+
+
                                 <a href={'https://www.slaskie.pl'} target="_blank"><img src={SlaskLogo}
                                                                                         alt={'slask_logo'}/></a>
                                 <a href={'https://bip-slaskie.pl/mszsosn'} target="_blank"><img id={'bip_logo'}
                                                                                                 src={BIPLogo}
                                                                                                 alt={'bip_logo'}/></a>
 
+
                             </div>
+
                         </div>
 
                     </header>

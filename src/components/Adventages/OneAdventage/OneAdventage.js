@@ -12,7 +12,7 @@ const OneAdventage = ({node}) => {
                     <span>{node.podpis}</span>
                 </div>
                 <div className={'oaw-second-page'}>
-                    <span>{node.opis}</span>
+                    <span dangerouslySetInnerHTML={{__html: node.opis}}></span>
                 </div>
 
             </div>

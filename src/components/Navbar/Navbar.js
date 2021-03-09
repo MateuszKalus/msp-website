@@ -6,6 +6,8 @@ import { Link } from "gatsby";
 import HamburgerIcon from "../../images/menu-24px.svg"
 import HamburgerIconBlack from "../../images/menu-24px_black.svg"
 
+import fb_icon from "../../images/Path 20.png"
+
 const Navbar = (props) => {
 
 
@@ -180,10 +182,14 @@ const Navbar = (props) => {
                         </div>
                     </li>
 
+
                 </ul>
 
 
+
             </div>
+
+            <a href={'https://www.facebook.com/RCKUSOSNOWIEC/'}><img id={'dropdown_fb_icon'} src={fb_icon}/></a>
         </nav>
     )
 }

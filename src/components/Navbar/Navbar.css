@@ -30,6 +30,7 @@ main > nav {
 
     display: flex;
     justify-content: center;
+    align-items: center;
 
     font-family: 'Montserrat';
 
@@ -287,7 +288,7 @@ main > nav {
     }
 
     .headerContent-logos {
-        height: 5vw;
+        height: fit-content;
     }
 
     #bip_logo {
@@ -308,7 +309,7 @@ main > nav {
     .headerContent {
         width: 100%;
         font-size: 1.5vw;
-        height: auto;
+        height: fit-content;
         padding: 5px 15px;
     }
 
@@ -325,8 +326,6 @@ main > nav {
     .dropdown-low {
         display: block;
     }
-
-
 
     .inner-navbar > ul > li > div {
         font-size: 4vw;
@@ -390,7 +389,14 @@ main > nav {
 @media (max-width: 600px) {
     .headerContent {
         padding: 6px 6px;
-        height: 50px;
+        height: fit-content;
         font-size: 2.5vw;
     }
 }
+
+#dropdown_fb_icon {
+    margin-right: 10px;
+    height: fit-content;
+    /*transform: translateY(50%);*/
+}
+
