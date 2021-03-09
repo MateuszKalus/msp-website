@@ -38,6 +38,11 @@ main > nav {
 
 }
 
+.navbar-content {
+    display: flex;
+
+}
+
 .hamburger-icon {
     height: 40px;
     width: 40px;
@@ -70,7 +75,9 @@ main > nav {
     width: 100%;
 }
 
+
 .dropbtn {
+    position: relative;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -240,6 +247,8 @@ main > nav {
     color: black;
 }
 
+
+
 .dropdown:focus .dropbtn {
     background-color: #ffffff;
     color: black;
@@ -378,7 +387,11 @@ main > nav {
         height: 70px;
         font-size: 16px;
         border: none;
+
+        position: relative;
     }
+
+
 
     main > nav > .inner-navbar {
         width: 100vw;
@@ -395,8 +408,20 @@ main > nav {
 }
 
 #dropdown_fb_icon {
-    margin-right: 10px;
-    height: fit-content;
-    /*transform: translateY(50%);*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+#dropdown_fb_icon img{
+    height: 25px;
+}
+
+#dropdown_fb_icon:hover {
+    background: transparent;
+}
+
+#dropdown_fb_icon:hover img {
+    transform: scale(1.2);
+
+}

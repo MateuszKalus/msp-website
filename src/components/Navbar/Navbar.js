@@ -182,6 +182,15 @@ const Navbar = (props) => {
                         </div>
                     </li>
 
+                    <li className="dropdown">
+                        <Link to={'https://www.facebook.com/RCKUSOSNOWIEC/'}>
+                            <div className="dropbtn" id={'dropdown_fb_icon'} >
+                                <img src={fb_icon}/>
+                            </div>
+                        </Link>
+                    </li>
+
+
 
                 </ul>
 
@@ -189,7 +198,6 @@ const Navbar = (props) => {
 
             </div>
 
-            <a href={'https://www.facebook.com/RCKUSOSNOWIEC/'}><img id={'dropdown_fb_icon'} src={fb_icon}/></a>
         </nav>
     )
 }

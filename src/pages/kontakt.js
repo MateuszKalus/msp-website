@@ -155,7 +155,6 @@ const StyledDivForCustomRadio = styled.div`
 `;
 
 
-
 const KontaktPage = ({data: {info}, data, location, pageContext}) => {
 
 
@@ -184,8 +183,14 @@ const KontaktPage = ({data: {info}, data, location, pageContext}) => {
     return (
 
         <MainLayoult location={location} crumbLabel={'Kontakt'} crumbs={crumbs}>
+
+
             <div className={'alert-sent'}>Wiadomość została wysłana</div>
             <div className={'silly-content-wrapper markdown-content'}>
+
+                <div className={'info-about-school-wrapper'}>
+
+                </div>
 
                 <Formik
                     initialValues={{name: '', email: '', kierunek: '', message: '', phone: '', contactway: ''}}

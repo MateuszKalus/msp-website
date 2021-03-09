@@ -61,7 +61,7 @@
 @media (max-width: 1024px) {
     #contrast-component {
         position: relative;
-        margin-top: 50px;
+        margin-top: 30px;
         left: 5px;
     }
 }
@@ -76,8 +76,15 @@
         height: 20px;
     }
 
+    .header-logos {
+        flex-direction: row;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+    }
+
     .header-logos img {
-        display: none;
+        max-width: 100px;
     }
 }
 
@@ -235,6 +242,7 @@ main > section {
 }
 
 .section-content {
+    position: relative;
     padding-bottom: 20px;
     width: 75vw;
     min-height: 600px;
@@ -411,4 +419,13 @@ footer {
 
     }
 
+}
+
+.info-about-school-wrapper {
+    position: absolute;
+    right: 70px;
+    top: 70px;
+    height: 100px;
+    width: 100px;
+    border: 1px solid red;
 }
