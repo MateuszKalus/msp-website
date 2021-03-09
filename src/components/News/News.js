@@ -9,7 +9,7 @@ const News = (props) => {
 
     const data = useStaticQuery(graphql`
     {
-      allDatoCmsNews(limit: 3, sort: {fields: meta___createdAt, order: DESC}) {
+      allDatoCmsNews(limit: 3, sort: {fields: meta___createdAt, order: DESC}, filter: {locale: {eq: "pl"}}) {
         nodes {
           meta {
             publishedAt(difference: "", formatString: "DD-MM-YYYY")

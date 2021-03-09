@@ -56,7 +56,7 @@ const DokumentyDoPobraniaPage = ({data: {pliki}, location, pageContext}) => {
 
 export const query = graphql`
 query allDoPobrania {
-  pliki: allDatoCmsPobierzDokumenty {
+  pliki: allDatoCmsPobierzDokumenty(filter: {locale: {eq: "pl"}}) {
     edges {
       node {
         tytul

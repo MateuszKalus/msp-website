@@ -49,7 +49,7 @@ const KierunkiPage = ({data: {jobs}, location, pageContext}) => {
 
 export const query = graphql`
         query MyQuery {
-  jobs: allDatoCmsKierunki(sort: {order: ASC, fields: nazwaKierunku}) {
+  jobs: allDatoCmsKierunki(sort: {order: ASC, fields: nazwaKierunku}, filter: {locale: {eq: "pl"}}) {
     edges {
       node {
         nazwaKierunku

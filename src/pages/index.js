@@ -28,7 +28,7 @@ const IndexPage = ({location, data, pageContext}) => {
             <JoinUs jobs={jobs} w1={data.datoCmsHasloNaBannerze.pierwszyWiersz} w2={data.datoCmsHasloNaBannerze.drugiWiersz}/>
             <News />
             <Adventages data={data.adventages}/>
-            <MovieSector />
+            <MovieSector movieurl={data.film.film.url}/>
             <ImportantMessage data={data.komunikat}/>
         </MainLayoult>
 
@@ -37,7 +37,7 @@ const IndexPage = ({location, data, pageContext}) => {
 
 export const query = graphql`
 query FetchJobs {
-    allDatoCmsKierunki(sort: {order: ASC, fields: nazwaKierunku}) {
+    allDatoCmsKierunki(sort: {order: ASC, fields: nazwaKierunku}, filter: {locale: {eq: "pl"}}) {
         edges {
             node {
                 nazwaKierunku
@@ -49,7 +49,7 @@ query FetchJobs {
         pierwszyWiersz
         drugiWiersz
     }
-    adventages: allDatoCmsAdventage(sort: {fields: kolejnoscNieZmienia, order: ASC}) {
+    adventages: allDatoCmsAdventage(sort: {fields: kolejnoscNieZmienia, order: ASC}, filter: {locale: {eq: "pl"}}) {
         edges {
             node {
                 naglowek
@@ -61,10 +61,15 @@ query FetchJobs {
             }
         }
     }
-    komunikat: datoCmsKomunikatDyrektora {
+    komunikat: datoCmsKomunikatDyrektora(locale: {eq: "pl"}) {
         nagWek
         trescKomunikatu
         podpis
+    }
+    film: datoCmsFilmPromocyjny {
+        film {
+            url
+        }
     }
 }
 `;

@@ -11,7 +11,7 @@ exports.createPages = async ({graphql, actions}) => {
     const blogPostTemplate = path.resolve('./src/templates/job-page.js');
     const result = await graphql(`
         query MyQuery2 {
-  allDatoCmsKierunki(sort: {order: ASC, fields: nazwaKierunku}) {
+  allDatoCmsKierunki(sort: {order: ASC, fields: nazwaKierunku}, filter: {locale: {eq: "pl"}}) {
     edges {
       node {
         nazwaKierunku

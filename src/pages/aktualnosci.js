@@ -78,7 +78,7 @@ const NewsPage = ({data, location, pageContext}) => {
 
 export const query = graphql`
 query MyQuer {
-  allDatoCmsNews(limit: 10, sort: {order: DESC, fields: meta___createdAt}) {
+  allDatoCmsNews(limit: 10, sort: {order: DESC, fields: meta___createdAt}, filter: {locale: {eq: "pl"}}) {
     edges {
       node {
         trescNewsaNode {

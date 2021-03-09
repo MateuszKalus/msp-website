@@ -58,7 +58,7 @@ const MainLayoult = ({children, location, crumbLabel, crumbs, ...props}) => {
         <StaticQuery
             query={graphql`
       {
-        nazwa: allDatoCmsNazwaSzkolyWNaglowku {
+        nazwa: allDatoCmsNazwaSzkolyWNaglowku(filter: {locale: {eq: "pl"}}) {
           edges {
             node {
               duzyGornyTekst
@@ -66,7 +66,7 @@ const MainLayoult = ({children, location, crumbLabel, crumbs, ...props}) => {
             }
           }
         }
-        daneadresowe: allDatoCmsDaneKontaktoweStopka {
+        daneadresowe: allDatoCmsDaneKontaktoweStopka(filter: {locale: {eq: "pl"}}) {
       edges {
         node {
           email {

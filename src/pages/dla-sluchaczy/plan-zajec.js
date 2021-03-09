@@ -33,7 +33,7 @@ const PlanZajecPage = ({data: {plany}, location, pageContext}) => {
 
 export const query = graphql`
 query getAllPlans {
-  plany: allDatoCmsPlanyZaj(sort: {fields: nazwaPlanu}) {
+  plany: allDatoCmsPlanyZaj(sort: {fields: nazwaPlanu}, filter: {locale: {eq: "pl"}}) {
     edges {
       node {
         nazwaPlanu

@@ -337,14 +337,14 @@ const KontaktPage = ({data: {info}, data, location, pageContext}) => {
 
 export const query = graphql`
     query FetchJobsToShow {
-        info: allDatoCmsKierunki(sort: {order: ASC, fields: nazwaKierunku}) {
+        info: allDatoCmsKierunki(sort: {order: ASC, fields: nazwaKierunku}, filter: {locale: {eq: "pl"}}) {
             edges {
                 node {
                     nazwaKierunku
                 }
             }
         },
-        nazwa: allDatoCmsNazwaSzkolyWNaglowku {
+        nazwa: allDatoCmsNazwaSzkolyWNaglowku(filter: {locale: {eq: "pl"}}){
             edges {
                 node {
                     duzyGornyTekst

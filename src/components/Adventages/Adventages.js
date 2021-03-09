@@ -1,7 +1,6 @@
 import React from "react"
 import "./Adventages.css"
 import OneAdventage from "./OneAdventage/OneAdventage";
-import {graphql} from "gatsby";
 
 const Adventages = ({data}) => {
 

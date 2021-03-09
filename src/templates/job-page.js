@@ -22,7 +22,7 @@ const JobPage = ({pageContext: {slug}, data: {job}, location, pageContext}) => {
 
 export const query = graphql`
 query fetchJob($slug: String) {
-    job: datoCmsKierunki(jobSlug: {eq: $slug}) {
+    job: datoCmsKierunki(jobSlug: {eq: $slug}, locale: {eq: "pl"}) {
         zawartoStrony
         nazwaKierunku
     }

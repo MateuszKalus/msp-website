@@ -4,7 +4,8 @@ import ReactPlayer from "react-player";
 import poster from "../../images/zdj_g@2x.png";
 import {Link} from "gatsby";
 
-const MovieSector = (props) => {
+const MovieSector = ({movieurl}) => {
+
 
     return (
         <div className={'moviesector-wrapper'}>
@@ -16,10 +17,9 @@ const MovieSector = (props) => {
                 </div>
 
             </div>
-
             <div className={'video-wrapper'}>
                 <ReactPlayer width={'100%'} height={'auto'} controls={true}
-                             url='https://www.datocms-assets.com/39399/1608526566-100000006492223992090072240218708198396691n.mp4'
+                             url={movieurl}
                              config={{
                                  file: {
                                      attributes: {

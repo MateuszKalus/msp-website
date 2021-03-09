@@ -38,7 +38,7 @@ const GaleriaPage = ({data: {info}, location, pageContext}) => {
 
 export const query = graphql`
 query fetchGalerie {
-  info: allDatoCmsGaleria1 {
+  info: allDatoCmsGaleria1(filter: {locale: {eq: "pl"}}) {
     edges {
       node {
         galeria {
