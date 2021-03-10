@@ -155,7 +155,7 @@ const StyledDivForCustomRadio = styled.div`
 `;
 
 
-const KontaktPage = ({data: {info}, data, location, pageContext}) => {
+const KontaktPage = ({data: {info, tabliczka}, data, location, pageContext}) => {
 
 
     console.log(data.nazwa.edges[0].node.duzyGornyTekst);
@@ -189,7 +189,7 @@ const KontaktPage = ({data: {info}, data, location, pageContext}) => {
             <div className={'silly-content-wrapper markdown-content'}>
 
                 <div className={'info-about-school-wrapper'}>
-
+                    <div dangerouslySetInnerHTML={{__html: tabliczka.tre}}></div>
                 </div>
 
                 <Formik
@@ -356,6 +356,9 @@ export const query = graphql`
                     malyDolnyTekst
                 }
             }
+        }
+        tabliczka: datoCmsKontaktTabliczkaInformacyjna(locale: {eq: "pl"}) {
+            tre
         }
     }
 `;

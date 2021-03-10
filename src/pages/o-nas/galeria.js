@@ -22,7 +22,7 @@ const GaleriaPage = ({data: {info}, location, pageContext}) => {
                 {
                     info.edges.map(({node}) => {
                         return <div className={'single-gallery'}>
-
+                            <h3>{node.tytu}</h3>
                             <MyGallery images={node.galeria}/>
                         </div>
                     })
@@ -39,13 +39,14 @@ const GaleriaPage = ({data: {info}, location, pageContext}) => {
 export const query = graphql`
 query fetchGalerie {
   info: allDatoCmsGaleria1(filter: {locale: {eq: "pl"}}) {
-    edges {
-      node {
-        galeria {
-          url
-        }
+      edges {
+          node {
+              tytu
+              galeria {
+                  url
+              }
+          }
       }
-    }
   }
 }
 `

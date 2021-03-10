@@ -424,8 +424,25 @@ footer {
 .info-about-school-wrapper {
     position: absolute;
     right: 70px;
-    top: 70px;
-    height: 100px;
-    width: 100px;
-    border: 1px solid red;
+    top: 0px;
+    height: fit-content;
+    min-width: 200px;
+    max-width: 300px;
+    padding: 20px;
+    background: #ff6200;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+
+    font-weight: bold;
+    color: aliceblue;
+}
+
+.single-gallery {
+}
+
+.single-gallery h3 {
+    text-align: left;
+    border-bottom: 3px solid #ff6200;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 20px;
 }

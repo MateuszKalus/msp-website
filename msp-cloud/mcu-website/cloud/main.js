@@ -10,8 +10,8 @@ sgMail.setApiKey("SG.zqcUysFaQteIRS72k2H7Gw.o9AIAPzaWqbHH5nup8mA4gUqz71H9e0zL0Pw
 
 const prefferedContactWay = request.params.contactway ? request.params.contactway : 'dowolna';
 const msg = {
-  to: 'sohorr@gmail.com', // Change to your recipient
-  from: 'sohorr@gmail.com', // Change to your verified sender
+  to: 'rckumed@rcku.nazwa.pl', // Change to your recipient
+  from: 'obslugarcku@gmail.com', // Change to your verified sender
   subject: `Nowa wiadomość od ${request.params.name}.`,
   text: 'Turn on html',
   html: `<p><strong>Imię: </strong> ${request.params.name} </p>`+
