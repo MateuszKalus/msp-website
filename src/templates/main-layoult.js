@@ -16,12 +16,14 @@ const MainLayoult = ({children, location, crumbLabel, crumbs, ...props}) => {
         return item.crumbLabel !== 'rekrutacja' && item.crumbLabel !== 'dla-sluchaczy' && item.crumbLabel !== 'o-nas'
     });
 
-    const approveCookies = async () => {
-        if (localStorage.getItem('cookies') !== 'true') {
-            localStorage.setItem("cookies", "true");
-            document.querySelector(".cookies-alert-wrapper").style.display = 'none';
+    const approveCookies = () => {
+        if (typeof window !== `undefined`) {
+            if (localStorage.getItem('cookies') !== 'true') {
+                localStorage.setItem("cookies", "true");
+                document.querySelector(".cookies-alert-wrapper").style.display = 'none';
+            }  
         }
-    }
+    };
 
     useEffect(() => {
 
