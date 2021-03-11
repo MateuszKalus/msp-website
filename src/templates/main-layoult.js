@@ -107,8 +107,12 @@ const MainLayoult = ({children, location, crumbLabel, crumbs, ...props}) => {
                                     <span>
                                         Ta strona korzysta z ciasteczek, aby świadczyć usługi na najwyższym poziomie.
                                     Dalsze korzystanie ze strony oznacza, że zgadzasz się na ich użycie.
-                                        <Link to={'/polityka'}>Link do polityki prywatności</Link>
+
                                     </span>
+
+                                    </div>
+                                    <div className={'policy-and-link'}>
+                                        <Link to={'/polityka'}>Link do polityki prywatności</Link>
                                         <button onClick={approveCookies}>Zgadzam się</button>
                                     </div>
 

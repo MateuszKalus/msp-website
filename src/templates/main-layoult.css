@@ -470,14 +470,17 @@ footer {
     left: 0px;
     background: #5e5f63;
     color: aliceblue;
-    width: 30%;
+    width: 40%;
+    min-width: 300px;
     height: fit-content;
     z-index: 150;
 }
 
+
+
 .cookies-alert-wrapper a {
     display: inline-block;
-    padding-top: 30px;
+    /*padding-top: 30px;*/
     text-decoration: underline;
     color: inherit;
 }
@@ -491,11 +494,13 @@ footer {
 }
 
 .cookies-alert span {
-    width: 80%;
+    width: 90%;
+    text-align: justify;
 }
 
-.cookies-alert button {
+.cookies-alert-wrapper button {
     margin: 1px;
+    padding: 5px;
     height: fit-content;
 
 }
@@ -503,4 +508,15 @@ footer {
 .bottom-footer-section-label a {
     text-decoration: underline;
     color: inherit;
+}
+
+.policy-and-link {
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 90%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
