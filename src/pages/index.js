@@ -9,6 +9,7 @@ import ImportantMessage from "../components/ImportantMessage/ImportantMessage";
 
 import Adventages from "../components/Adventages/Adventages";
 
+import Img from 'gatsby-image'
 
 import {graphql} from "gatsby";
 
@@ -25,11 +26,12 @@ const IndexPage = ({location, data, pageContext}) => {
 
     return (
         <MainLayoult mainPage={true} location={location} crumbLabel="Strona Główna" crumbs={crumbs}>
-            <JoinUs jobs={jobs} w1={data.datoCmsHasloNaBannerze.pierwszyWiersz} w2={data.datoCmsHasloNaBannerze.drugiWiersz}/>
+            <JoinUs jobs={jobs} w1={data.datoCmsHasloNaBannerze.pierwszyWiersz} w2={data.datoCmsHasloNaBannerze.drugiWiersz} zdj={data.zdjglowne.edges[0].node.zdjCie.url}/>
             <News />
             <Adventages data={data.adventages}/>
             <MovieSector movieurl={data.film.film.url}/>
-            <ImportantMessage data={data.komunikat}/>
+            {data.komunikat.nagWek ? <ImportantMessage data={data.komunikat}/> : null}
+
         </MainLayoult>
 
     )
@@ -69,6 +71,18 @@ query FetchJobs {
     film: datoCmsFilmPromocyjny {
         film {
             url
+        }
+    }
+    zdjglowne: allDatoCmsZdjCieNaStronieGWnej(filter: {locale: {eq: "pl"}}) {
+        nodes {
+            id
+        }
+        edges {
+            node {
+                zdjCie {
+                    url
+                }
+            }
         }
     }
 }

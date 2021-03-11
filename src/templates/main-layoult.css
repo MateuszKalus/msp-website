@@ -462,3 +462,45 @@ footer {
     margin: auto;
     margin-bottom: 20px;
 }
+
+.cookies-alert-wrapper {
+    padding: 20px;
+    position: fixed;
+    bottom: 20px;
+    left: 0px;
+    background: #5e5f63;
+    color: aliceblue;
+    width: 30%;
+    height: fit-content;
+    z-index: 150;
+}
+
+.cookies-alert-wrapper a {
+    display: inline-block;
+    padding-top: 30px;
+    text-decoration: underline;
+    color: inherit;
+}
+
+.cookies-alert {
+
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.cookies-alert span {
+    width: 80%;
+}
+
+.cookies-alert button {
+    margin: 1px;
+    height: fit-content;
+
+}
+
+.bottom-footer-section-label a {
+    text-decoration: underline;
+    color: inherit;
+}

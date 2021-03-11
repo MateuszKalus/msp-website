@@ -1,6 +1,6 @@
 .one-adventage-wrapper {
     width: 20%;
-    min-width: 150px;
+    min-width: 180px;
 
     /*margin: 5px;*/
     /*background-color: #5e5f63;*/
@@ -38,6 +38,7 @@
 .oaw-second-page span {
     text-align: center;
     font-weight: bold;
+    font-size: 12px;
 
 }
 

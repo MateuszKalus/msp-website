@@ -2,7 +2,14 @@
 .partner-wrapper {
     justify-content: center;
 }
-.partner-wrapper img{
+
+.partner-wrapper span {
+    border-bottom: 2px solid #ff6200;
+}
+
+.partner-wrapper #partner-logo {
+    justify-content: center;
+    margin: 0px 20px;
     width: 130px;
 }
 
@@ -12,10 +19,6 @@
     padding: 10px 0px 20px;
     display: flex;
     align-items: center;
-}
-
-.single-job > img {
-    margin: 0px 10px;
 }
 
 .single-job-link {

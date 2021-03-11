@@ -31,8 +31,8 @@ const PartnerzyPage = ({data, location, pageContext}) => {
 
                         return (
                             <div className={'single-job partner-wrapper'} key={node.nazwaPartnera}>
-                                {node.nazwaPartnera}
-                                <img src={node.logo.url} alt={'school_marker'}/>
+                                <span>{node.nazwaPartnera}</span>
+                                <a href={node.linkDoStronyPartnera}><img id={'partner-logo'} src={node.logo.url} alt={'school_marker'}/></a>
                             </div>
                         )
                     })}
@@ -56,6 +56,7 @@ export const query = graphql`
                         logo {
                             url
                         }
+                        linkDoStronyPartnera
                     }
                 }
             }

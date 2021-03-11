@@ -14,8 +14,14 @@ const MainLayoult = ({children, location, crumbLabel, crumbs, ...props}) => {
 
     let newCrumbs = crumbs.filter((item) => {
         return item.crumbLabel !== 'rekrutacja' && item.crumbLabel !== 'dla-sluchaczy' && item.crumbLabel !== 'o-nas'
-    })
+    });
 
+    const approveCookies = async () => {
+        if (localStorage.getItem('cookies') !== 'true') {
+            localStorage.setItem("cookies", "true");
+            document.querySelector(".cookies-alert-wrapper").style.display = 'none';
+        }
+    }
 
     useEffect(() => {
 
@@ -26,9 +32,7 @@ const MainLayoult = ({children, location, crumbLabel, crumbs, ...props}) => {
         } else {
             breadcrumb.classList.add('show')
         }
-
         handleContrast();
-        console.log('gw');
     });
 
     const changeContrastInLocalStorage = async () => {
@@ -94,6 +98,25 @@ const MainLayoult = ({children, location, crumbLabel, crumbs, ...props}) => {
     `}
             render={data => (
                 <main>
+                    {
+                        localStorage.getItem('cookies') !== 'true' ? (
+                                <div className={'cookies-alert-wrapper'}>
+                                    <div className={'cookies-alert'}>
+                                    <span>
+                                        Ta strona korzysta z ciasteczek, aby świadczyć usługi na najwyższym poziomie.
+                                    Dalsze korzystanie ze strony oznacza, że zgadzasz się na ich użycie.
+                                        <Link to={'/polityka'}>Link do polityki prywatności</Link>
+                                    </span>
+                                        <button onClick={approveCookies}>Zgadzam się</button>
+                                    </div>
+
+                                </div>
+                            )
+                            :
+                            (<></>)
+                    }
+
+
                     <header>
                         <div className={'headerContent'}>
                             <div>
@@ -109,7 +132,6 @@ const MainLayoult = ({children, location, crumbLabel, crumbs, ...props}) => {
                             </div>
 
                             <div className={'header-logos'}>
-
 
 
                                 <a href={'https://www.slaskie.pl'} target="_blank"><img src={SlaskLogo}
@@ -152,7 +174,7 @@ const MainLayoult = ({children, location, crumbLabel, crumbs, ...props}) => {
                         </div>
                         <div className={'bottom-footer-section'}>
                             <div className={'bottom-footer-section-label'}>
-                                <span>Polityka prywatności i cookies</span>
+                                <span><Link to={'/polityka'}>Polityka prywatności i cookies</Link></span>
                                 <span>© Created by MDK</span>
                             </div>
 

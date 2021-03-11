@@ -1,14 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import "./JoinUs.css"
-import JoinUsImg from '../../images/zdj_g@2x.png'
 import { Link} from 'gatsby'
 
 import TextLoop from "react-text-loop";
 
 // import ReactTextTransition, {presets} from "react-text-transition";
 
-
-const JoinUs = ({jobs, w1, w2}) => {
+const JoinUs = ({jobs, w1, w2, zdj}) => {
 
     const [counter, setCounter] = useState(0);
     const howManyJobs = jobs.length || 0;
@@ -31,7 +29,7 @@ const JoinUs = ({jobs, w1, w2}) => {
 
     return (
         <div className={'joinus-wrapper'}>
-            <img id={'joinus-img'} src={JoinUsImg} alt={'mainImg'}/>
+            <img id={'joinus-img'} src={zdj} alt={'mainImg'}/>
 
             <div className={'joinus-label'}>
                 <Link to={'/rekrutacja/wazne-informacje'}><div  id={'banner-link-to-info'}>Dołącz do nas</div></Link><br/><br/>

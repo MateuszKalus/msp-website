@@ -4,14 +4,15 @@ require("dotenv").config({
 
 module.exports = {
     siteMetadata: {
-        title: `Medyczna Szkoła Policealna`,
+        title: `Medyczna Szkoła Policealna Województwa Śląskiego`,
         siteUrl: `https://www.rcku.nazwa.pl`,
         description: `Dołącz do Medycznej Szkoły Policealnej!`,
-        image: "/images/zdj_g@2x.png"
+        image: "/images/logo_rcku.png"
     },
     plugins: [
         `gatsby-plugin-remove-trailing-slashes`,
         `gatsby-transformer-sharp`,
+        `gatsby-image`,
         `gatsby-plugin-sharp`,
         {
             resolve: `gatsby-plugin-breadcrumb`,

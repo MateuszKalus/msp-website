@@ -8,6 +8,10 @@
     padding: 10px 0px 10px;
 }
 
+.adventage-wrapper .one-adventage-wrapper {
+    flex-grow: 1;
+}
+
 .adventage-header {
     display: flex;
     flex-direction: column;

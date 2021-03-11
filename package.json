@@ -1,9 +1,9 @@
 {
-  "name": "msp-website",
+  "name": "RCKU - strona internetowa",
   "version": "1.0.0",
   "private": true,
-  "description": "MSP-website",
-  "author": "Mateusz Kalus",
+  "description": "Medyczna Szkoła Policealna",
+  "author": "MDK",
   "keywords": [
     "gatsby"
   ],
@@ -24,7 +24,7 @@
     "dotenv": "^8.2.0",
     "formik": "^2.2.6",
     "gatsby": "^2.26.1",
-    "gatsby-image": "^2.8.0",
+    "gatsby-image": "^2.11.0",
     "gatsby-plugin-breadcrumb": "^10.0.0",
     "gatsby-plugin-manifest": "^2.9.0",
     "gatsby-plugin-sass": "^2.8.0",
