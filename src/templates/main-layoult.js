@@ -181,7 +181,7 @@ const MainLayoult = ({children, location, crumbLabel, crumbs, ...props}) => {
                         <div className={'bottom-footer-section'}>
                             <div className={'bottom-footer-section-label'}>
                                 <span><Link to={'/polityka'}>Polityka prywatności i cookies</Link></span>
-                                <span>© Created by MDK</span>
+                                <span> </span>
                             </div>
 
                         </div>
