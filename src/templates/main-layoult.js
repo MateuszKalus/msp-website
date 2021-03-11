@@ -21,7 +21,7 @@ const MainLayoult = ({children, location, crumbLabel, crumbs, ...props}) => {
             if (localStorage.getItem('cookies') !== 'true') {
                 localStorage.setItem("cookies", "true");
                 document.querySelector(".cookies-alert-wrapper").style.display = 'none';
-            }  
+            }
         }
     };
 
@@ -101,7 +101,7 @@ const MainLayoult = ({children, location, crumbLabel, crumbs, ...props}) => {
             render={data => (
                 <main>
                     {
-                        localStorage.getItem('cookies') !== 'true' ? (
+                        typeof window !== `undefined` && localStorage.getItem('cookies') !== 'true' ? (
                                 <div className={'cookies-alert-wrapper'}>
                                     <div className={'cookies-alert'}>
                                     <span>
