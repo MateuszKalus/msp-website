@@ -356,9 +356,7 @@ footer {
     }
 
     .center-form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+
     }
 }
 
@@ -426,14 +424,32 @@ footer {
     right: 70px;
     top: 0px;
     height: fit-content;
-    min-width: 200px;
-    max-width: 300px;
+    width: 300px;
     padding: 20px;
     background: #ff6200;
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
 
     font-weight: bold;
     color: aliceblue;
+}
+
+@media (max-width: 750px) {
+    .info-about-school-wrapper {
+        position: relative;
+        margin: auto;
+        left: 5px;
+    }
+
+
+    .center-form {
+        margin-top: 50px;
+        margin-left: auto!important;
+        margin-right: auto!important;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .single-gallery {

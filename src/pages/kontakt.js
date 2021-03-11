@@ -141,7 +141,7 @@ outline-color: #ff6200;
 `;
 
 const StyledDivForCustomRadio = styled.div`
-    display: inline-block;
+    display: block;
     margin-right: 50px;
     margin-bottom: 25px;
 
