@@ -72,6 +72,9 @@ const MainLayoult = ({children, location, crumbLabel, crumbs, ...props}) => {
             }
           }
         }
+        linkDoFB: datoCmsLinkDoFbWMenuNawigacyjnym {
+    linkDoFb
+  }
         daneadresowe: allDatoCmsDaneKontaktoweStopka(filter: {locale: {eq: "pl"}}) {
       edges {
         node {
@@ -153,7 +156,8 @@ const MainLayoult = ({children, location, crumbLabel, crumbs, ...props}) => {
 
                     </header>
 
-                    <Navbar/>
+                    <Navbar linkDoFB={data.linkDoFB.linkDoFb}/>
+
                     <section>
                         <div className={'section-content'}>
                             <Breadcrumb

@@ -8,8 +8,7 @@ import HamburgerIconBlack from "../../images/menu-24px_black.svg"
 
 import fb_icon from "../../images/Path 20.png"
 
-const Navbar = (props) => {
-
+const Navbar = ({linkDoFB}) => {
 
 
     if (typeof window !== `undefined`) {
@@ -33,6 +32,7 @@ const Navbar = (props) => {
 
     return (
         <nav id={'navbar'}>
+
             <div className={'inner-navbar'}>
 
                 <li className={'dropdown-low'}>
@@ -183,11 +183,11 @@ const Navbar = (props) => {
                     </li>
 
                     <li className="dropdown">
-                        <Link to={'https://www.facebook.com/RCKUSOSNOWIEC/'}>
+                        <a href={linkDoFB}>
                             <div className="dropbtn" id={'dropdown_fb_icon'} >
                                 <img src={fb_icon}/>
                             </div>
-                        </Link>
+                        </a>
                     </li>
 
 
