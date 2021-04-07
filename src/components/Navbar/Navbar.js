@@ -189,13 +189,8 @@ const Navbar = ({linkDoFB}) => {
                             </div>
                         </a>
                     </li>
-
-
-
                 </ul>
-
-
-
+                
             </div>
 
         </nav>

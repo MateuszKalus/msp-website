@@ -23,7 +23,7 @@ const MovieSector = ({movieurl}) => {
                              config={{
                                  file: {
                                      attributes: {
-                                         poster: poster
+
                                      }
                                  }
                              }}
