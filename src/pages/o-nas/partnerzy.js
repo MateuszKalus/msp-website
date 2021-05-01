@@ -32,7 +32,7 @@ const PartnerzyPage = ({data, location, pageContext}) => {
                         return (
                             <div className={'single-job partner-wrapper'} key={node.nazwaPartnera}>
                                 <span>{node.nazwaPartnera}</span>
-                                <a href={node.linkDoStronyPartnera}><img id={'partner-logo'} src={node.logo.url} alt={'school_marker'}/></a>
+                                <a href={node.linkDoStronyPartnera}><img id={'partner-logo'} src={node.logo.customData.url} alt={'school_marker'}/></a>
                             </div>
                         )
                     })}
@@ -54,7 +54,7 @@ export const query = graphql`
                     node {
                         nazwaPartnera
                         logo {
-                            url
+                            customData
                         }
                         linkDoStronyPartnera
                     }

@@ -36,7 +36,7 @@ const DokumentyDoPobraniaPage = ({data: {pliki}, location, pageContext}) => {
                 <h3>Szkoła:</h3>
                 <ul>
                     {kategoria_szkola.map(({node}) => {
-                        return <li key={node.url}><Link to={node.plik.url}>{node.tytul}</Link></li>
+                        return <li key={node.plik.customData.url}><Link to={node.plik.customData.url}>{node.tytul}</Link></li>
                     })}
                 </ul>
 
@@ -44,7 +44,7 @@ const DokumentyDoPobraniaPage = ({data: {pliki}, location, pageContext}) => {
                 <h3>Kursy i inne:</h3>
                 <ul>
                     {kategoria_KursyIInne.map(({node}) => {
-                        return <li><Link to={node.plik.url}>{node.tytul}</Link></li>
+                        return <li key={node.plik.customData.url}><Link to={node.plik.customData.url}>{node.tytul}</Link></li>
                     })}
                 </ul>
 
@@ -62,7 +62,7 @@ query allDoPobrania {
         tytul
         kategoria
         plik {
-          url
+          customData
         }
         model {
           name

@@ -15,7 +15,7 @@ const BibliotekaPage = ({data: {info}, location, pageContext}) => {
         <MainLayoult location={location} crumbLabel={'Biblioteka'} crumbs={crumbs}>
             <div className={'biblioteka silly-content-wrapper markdown-content'}>
                 <div dangerouslySetInnerHTML={{__html: info.tre}}/>
-                {info.zdjecie && <img src={info.zdjecie.url} alt={info.zdjecie.url}/>}
+                {info.zdjecie && <img src={info.zdjecie.customData.url} alt={info.zdjecie.customData.url}/>}
                 <div dangerouslySetInnerHTML={{__html: info.godzinyOtwarcia}}/>
             </div>
         </MainLayoult>
@@ -29,7 +29,7 @@ query fetchBiblioteka {
     tytul
     godzinyOtwarcia
     zdjecie {
-        url
+        customData
     }
   }
 }

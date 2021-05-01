@@ -6,13 +6,12 @@ import {graphql} from 'gatsby'
 import MainLayoult from "../../templates/main-layoult";
 
 import ReactPlayer from "react-player";
-import poster from "../../images/zdj_g@2x.png";
 
 
-const OPlacowcePage = ({data: {info}, location, pageContext}) => {
+const OPlacowcePage = ({data: {info, film}, location, pageContext}) => {
 
     const {
-        breadcrumb: { crumbs },
+        breadcrumb: {crumbs},
     } = pageContext;
 
     return (
@@ -24,14 +23,7 @@ const OPlacowcePage = ({data: {info}, location, pageContext}) => {
                 <div className={'around-video'}>
 
                     <ReactPlayer width={'100%'} height={'auto'} controls={true} style={{margin: 'auto'}}
-                                 url='https://www.datocms-assets.com/39399/1608741281-rcku-reklama.mp4'
-                                 config={{
-                                     file: {
-                                         attributes: {
-                                             poster: poster
-                                         }
-                                     }
-                                 }}
+                                 url={film.linkDoFilmuPromocyjnego}
                     />
 
                 </div>
@@ -44,12 +36,15 @@ const OPlacowcePage = ({data: {info}, location, pageContext}) => {
 };
 
 export const query = graphql`
-query fetchOPlacowce {
-  info: datoCmsOPlacowce {
-    tytul
-    tresc
-  }
-}
+    query fetchOPlacowce {
+        info: datoCmsOPlacowce {
+            tytul
+            tresc
+        }
+        film: datoCmsFilmPromocyjny {
+            linkDoFilmuPromocyjnego
+        }
+    }
 
 `
 

@@ -31,7 +31,7 @@ const KierunkiPage = ({data: {jobs}, location, pageContext}) => {
 
                         return (
                             <div className={'single-job'} key={node.jobSlug}>
-                                <img src={'https://www.datocms-assets.com/39399/1608747085-school-24px.svg'} alt={'school_marker'}/>
+                                <img src={'https://rcku.nazwa.pl/cms/sites/default/files/2021-05/school-24px%20%282%29.svg'} alt={'school_marker'}/>
                                 <Link className={'single-job-link'} to={node.jobSlug}><h4>{node.nazwaKierunku}</h4></Link>
                             </div>
                         )

@@ -19,7 +19,7 @@ const News = (props) => {
           tytul
           slug
           zdjecie {
-            url
+            customData
           }
         }
       }
@@ -36,8 +36,8 @@ const News = (props) => {
 
                     let pathToImg;
                     if (!node.zdjecie) {
-                        pathToImg = 'https://www.datocms-assets.com/39399/1608740108-medycyna-pracy-vita-medica-1280x800.jpg';
-                    } else pathToImg = node.zdjecie.url;
+                        pathToImg = 'https://rcku.nazwa.pl/cms/sites/default/files/2021-05/medycyna-pracy-vita-medica-1280x800.jpg';
+                    } else pathToImg = node.zdjecie.customData.url;
 
                     return (
                         <Article classes={'article-wrapper'} key={article_name + counter} counter={counter} imgURL={pathToImg}

@@ -8,7 +8,7 @@ const OneAdventage = ({node}) => {
             <div className={'one-adventage-wrapper'}>
                 <div className={'oaw-first-page'}>
                     <span>{node.naglowek}</span>
-                    <img src={node.ikona.url}/>
+                    <img src={node.ikona.customData.url}/>
                     <span>{node.podpis}</span>
                 </div>
                 <div className={'oaw-second-page'}>

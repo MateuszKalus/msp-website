@@ -26,10 +26,10 @@ const IndexPage = ({location, data, pageContext}) => {
 
     return (
         <MainLayoult mainPage={true} location={location} crumbLabel="Strona Główna" crumbs={crumbs}>
-            <JoinUs jobs={jobs} w1={data.datoCmsHasloNaBannerze.pierwszyWiersz} w2={data.datoCmsHasloNaBannerze.drugiWiersz} zdj={data.zdjglowne.edges[0].node.zdjCie.url}/>
+            <JoinUs jobs={jobs} w1={data.datoCmsHasloNaBannerze.pierwszyWiersz} w2={data.datoCmsHasloNaBannerze.drugiWiersz} zdj={data.zdjglowne.edges[0].node.zdjCie.customData.url}/>
             <News />
             <Adventages data={data.adventages}/>
-            <MovieSector movieurl={data.film.film.url}/>
+            <MovieSector movieurl={data.film.linkDoFilmuPromocyjnego}/>
             {data.komunikat.nagWek ? <ImportantMessage data={data.komunikat}/> : null}
 
         </MainLayoult>
@@ -58,7 +58,7 @@ query FetchJobs {
                 opis
                 podpis
                 ikona {
-                    url
+                    customData
                 }
             }
         }
@@ -69,9 +69,7 @@ query FetchJobs {
         podpis
     }
     film: datoCmsFilmPromocyjny {
-        film {
-            url
-        }
+        linkDoFilmuPromocyjnego
     }
     zdjglowne: allDatoCmsZdjCieNaStronieGWnej(filter: {locale: {eq: "pl"}}) {
         nodes {
@@ -80,7 +78,7 @@ query FetchJobs {
         edges {
             node {
                 zdjCie {
-                    url
+                    customData
                 }
             }
         }

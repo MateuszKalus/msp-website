@@ -18,9 +18,9 @@ const JobPage = ({pageContext: {slug}, data: {job}, location, pageContext}) => {
 
                 <div dangerouslySetInnerHTML={{__html: job.zawartoStrony}}/>
 
-                {job.filmikPromocyjny?.url ? <div className={'job-video-wrapper'}>
+                {job.filmikPromocyjny?.customData.url ? <div className={'job-video-wrapper'}>
                     <ReactPlayer width={'100%'} height={'auto'} controls={true}
-                                 url={job.filmikPromocyjny?.url}
+                                 url={job.filmikPromocyjny?.customData.url}
                                  config={{
                                      file: {
                                          attributes: {
@@ -42,7 +42,7 @@ query fetchJob($slug: String) {
         zawartoStrony
         nazwaKierunku
         filmikPromocyjny {
-            url
+            customData
         }
     }
 }

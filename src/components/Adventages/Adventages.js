@@ -5,7 +5,6 @@ import OneAdventage from "./OneAdventage/OneAdventage";
 const Adventages = ({data}) => {
 
     let generateAdventages = ({edges}) => {
-        // console.log(edges)
         return (
             edges.map(obj => {
                     return (
@@ -25,14 +24,6 @@ const Adventages = ({data}) => {
 
             <div className={'adventages-content'}>
                 {generateAdventages(data)}
-
-                {/*<OneAdventage/>*/}
-                {/*<OneAdventage/>*/}
-                {/*<OneAdventage/>*/}
-                {/*<OneAdventage/>*/}
-                {/*<OneAdventage/>*/}
-
-
             </div>
 
         </div>

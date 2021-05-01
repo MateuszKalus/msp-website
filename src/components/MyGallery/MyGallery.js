@@ -4,10 +4,10 @@ import React from "react";
 
 const MyGallery = ({images}) => {
 
-    const new_images = images.map(({url}) => {
+    const new_images = images.map(({customData}) => {
         return {
-            original: url,
-            thumbnail: url,
+            original: customData.url,
+            thumbnail: customData.url,
         }
     })
 

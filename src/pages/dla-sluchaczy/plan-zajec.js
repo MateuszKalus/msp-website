@@ -21,7 +21,7 @@ const PlanZajecPage = ({data: {plany}, location, pageContext}) => {
                 <ul>
                     {plany.edges.map(({node}) => {
                         console.log(node.nazwaPlanu)
-                        return <li key={node.nazwaPlanu}><a href={node.planZajecWFormaciePdf.url}>{node.nazwaPlanu}</a></li>
+                        return <li key={node.nazwaPlanu}><a href={node.planZajecWFormaciePdf.customData.url}>{node.nazwaPlanu}</a></li>
                     })}
                 </ul>
 
@@ -38,7 +38,7 @@ query getAllPlans {
       node {
         nazwaPlanu
         planZajecWFormaciePdf {
-          url
+          customData
         }
       }
     }

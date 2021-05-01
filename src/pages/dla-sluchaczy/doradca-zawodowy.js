@@ -15,8 +15,8 @@ const BibliotekaPage = ({data: {info}, location, pageContext}) => {
             <div className={'silly-content-wrapper markdown-content '}>
                 <div dangerouslySetInnerHTML={{__html: info.tre}}/>
                 <div className={'single-article-gallery'}>
-                    {info.galeriaObrazkWDodatkowych.map(({url}) => {
-                        return <img src={url} alt={url} key={url}/>
+                    {info.galeriaObrazkWDodatkowych.map(({customData}) => {
+                        return <img src={customData.url} alt={customData.url} key={customData.url}/>
                     })}
                 </div>
             </div>
@@ -30,7 +30,7 @@ query fetchDoradca {
     tre
     tytul
     galeriaObrazkWDodatkowych {
-        url
+        customData
     }
   }
 }

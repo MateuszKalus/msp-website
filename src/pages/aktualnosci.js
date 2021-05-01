@@ -31,10 +31,10 @@ const NewsPage = ({data, location, pageContext}) => {
 
                     {articles.map(({node}) => {
 
-                        const images = node.dodatkoweObrazki.map(({url}) => {
+                        const images = node.dodatkoweObrazki.map(({customData}) => {
                                 return (
                                     {
-                                        src: url,
+                                        src: customData.url,
                                         title: 'image title',
                                         description: 'image description'
                                     }
@@ -46,7 +46,7 @@ const NewsPage = ({data, location, pageContext}) => {
                             <div className={'single-article'}>
                                 <h1>{node.tytul}</h1>
                                 <div className={'single-article-content'}>
-                                    {node.zdjecie && <img src={node.zdjecie.url} alt={node.zdjecie.url}/>}
+                                    {node.zdjecie && <img src={node.zdjecie.customData.url} alt={node.zdjecie.customData.url}/>}
                                     <div className={'single-article-text markdown-content'}>
                                         <div dangerouslySetInnerHTML={{__html: node.trescNewsa}}/>
 
@@ -94,10 +94,10 @@ query MyQuer {
          }
         trescNewsa
         zdjecie {
-          url
+          customData
         }
         dodatkoweObrazki {
-          url
+          customData
         }
       }
     }

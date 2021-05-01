@@ -43,7 +43,7 @@ query fetchGalerie {
           node {
               tytu
               galeria {
-                  url
+                  customData
               }
           }
       }
