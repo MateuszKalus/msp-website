@@ -109,10 +109,6 @@
     border: 3px solid aliceblue;
 }
 
-.dark-theme .header-logos > a:first-of-type img{
-    background: yellow!important;
-}
-
 h3 {
     font-family: Montserrat;
     font-weight: 600;

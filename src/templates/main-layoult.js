@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react"
 import "./main-layoult.css"
 import Navbar from '../components/Navbar/Navbar'
 import ContactBar from '../components/Footer/ContactBar/ContactBar'
-import SlaskLogo from '../images/logo-slaskie-czarne@2x.png'
+import SlaskLogo from '../images/logo-slaskie-biale-rgb.png'
 import BIPLogo from '../images/bip_logo.png'
 import ContrastIcon from '../images/contrast_icon.png'
 

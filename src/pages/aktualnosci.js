@@ -42,6 +42,15 @@ const NewsPage = ({data, location, pageContext}) => {
                             }
                         );
 
+                        const getData = (dataString) => {
+                            const hour = parseInt(dataString.slice(0,2))+1;
+                            let hourToAttach = '';
+                            if (hour < 10) hourToAttach='0'+hour.toString();
+                            else hourToAttach=hour.toString();
+
+                            return hourToAttach+dataString.slice(2);
+                        }
+
                         return (
                             <div className={'single-article'}>
                                 <h1>{node.tytul}</h1>
@@ -60,7 +69,7 @@ const NewsPage = ({data, location, pageContext}) => {
 
                                 </div>
                                 <p className={'single-article-content-date'}>
-                                    <span>{node.meta.createdAt}</span>
+                                    <span>{getData(node.meta.createdAt)}</span>
                                 </p>
                             </div>
                         )
@@ -90,7 +99,7 @@ query MyQuer {
         slug
         tytul
         meta {
-            createdAt(difference: "", formatString: "hh:mm      DD/MM/YYYY")
+            createdAt(difference: "", formatString: "HH:mm      DD/MM/YYYY")
          }
         trescNewsa
         zdjecie {
