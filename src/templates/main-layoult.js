@@ -12,9 +12,26 @@ import {graphql, StaticQuery, Link, navigate} from "gatsby";
 
 const MainLayoult = ({children, location, crumbLabel, crumbs, ...props}) => {
 
-    let newCrumbs = crumbs.filter((item) => {
-        return item.crumbLabel !== 'rekrutacja' && item.crumbLabel !== 'dla-sluchaczy' && item.crumbLabel !== 'o-nas'
-    });
+
+    let newCrumbs = crumbs
+        .map((item) => {
+            switch (item.crumbLabel) {
+
+                case 'rekrutacja':
+                    item.crumbLabel = 'Rekrutacja';
+                    break;
+
+                case 'dla-sluchaczy':
+                    item.crumbLabel = 'Dla Słuchaczy';
+                    break;
+
+                case 'o-nas':
+                    item.crumbLabel = 'O Nas';
+                    break;
+            }
+            item.pathname = '';
+            return item;
+        });
 
     const approveCookies = () => {
         if (typeof window !== `undefined`) {
@@ -75,6 +92,9 @@ const MainLayoult = ({children, location, crumbLabel, crumbs, ...props}) => {
         linkDoFB: datoCmsLinkDoFbWMenuNawigacyjnym {
     linkDoFb
   }
+  nazwazakladkiInne: datoCmsONasInneNazwaZakAdki(locale: {eq: "pl"}) {
+        nazwaZakAdki
+    }
         daneadresowe: allDatoCmsDaneKontaktoweStopka(filter: {locale: {eq: "pl"}}) {
       edges {
         node {
@@ -156,7 +176,7 @@ const MainLayoult = ({children, location, crumbLabel, crumbs, ...props}) => {
 
                     </header>
 
-                    <Navbar linkDoFB={data.linkDoFB.linkDoFb}/>
+                    <Navbar linkDoFB={data.linkDoFB.linkDoFb} nazwazakladkiInne={data.nazwazakladkiInne.nazwaZakAdki}/>
 
                     <section>
                         <div className={'section-content'}>

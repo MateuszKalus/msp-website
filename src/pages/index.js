@@ -63,6 +63,9 @@ query FetchJobs {
             }
         }
     }
+    nazwazakladki: datoCmsONasInneNazwaZakAdki(locale: {eq: "pl"}) {
+        nazwaZakAdki
+    }
     komunikat: datoCmsKomunikatDyrektora(locale: {eq: "pl"}) {
         nagWek
         trescKomunikatu

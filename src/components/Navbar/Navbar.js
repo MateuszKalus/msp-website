@@ -1,14 +1,14 @@
 import React from "react";
 import "./Navbar.css";
 import Logo from '../../images/logo_rcku.png';
-import { Link } from "gatsby";
+import {graphql, Link} from "gatsby";
 
 import HamburgerIcon from "../../images/menu-24px.svg"
 import HamburgerIconBlack from "../../images/menu-24px_black.svg"
 
 import fb_icon from "../../images/Path 20.png"
 
-const Navbar = ({linkDoFB}) => {
+const Navbar = ({linkDoFB, nazwazakladkiInne}) => {
 
 
     if (typeof window !== `undefined`) {
@@ -94,6 +94,8 @@ const Navbar = ({linkDoFB}) => {
                                     <Link to={'/o-nas/o-placowce'}>O placówce</Link>
                                     <Link to={'/o-nas/galeria'}>Galeria</Link>
                                     <Link to={'/o-nas/partnerzy'}>Partnerzy</Link>
+                                    <Link to={'/o-nas/dokumenty-do-pobrania'}>Dokumenty do pobrania</Link>
+                                    <Link to={'/o-nas/inne'}>{nazwazakladkiInne}</Link>
                                     {/*<Link to={'/o-nas/rodo'}>RODO</Link>*/}
                                 </div>
                             </li>
@@ -170,6 +172,8 @@ const Navbar = ({linkDoFB}) => {
                             <Link to={'/o-nas/o-placowce'}>O placówce</Link>
                             <Link to={'/o-nas/galeria'}>Galeria</Link>
                             <Link to={'/o-nas/partnerzy'}>Partnerzy</Link>
+                            <Link to={'/o-nas/dokumenty-do-pobrania'}>Dokumenty do pobrania</Link>
+                            <Link to={'/o-nas/inne'}>{nazwazakladkiInne}</Link>
                             {/*<Link to={'/o-nas/rodo'}>RODO</Link>*/}
                         </div>
                     </li>
@@ -190,7 +194,7 @@ const Navbar = ({linkDoFB}) => {
                         </a>
                     </li>
                 </ul>
-                
+
             </div>
 
         </nav>
